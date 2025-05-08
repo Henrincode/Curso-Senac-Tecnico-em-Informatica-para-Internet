@@ -1,0 +1,120 @@
+.linhaVermelha {
+  height: 10px;
+}
+
+.cabecalho {
+  height: 100px;
+}
+
+.cabecalho-menu {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#conteudo {
+  margin: 10px auto;
+  width: 1000px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.img-blog {
+    margin: 10px auto;
+    border: none !important;
+    border-radius: 10px !important;
+}
+
+.bloco {
+  background-color: rgb(132, 152, 255);
+  height: 300px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.bloco-direita, .bloco-esquerda {
+  padding-top: 200px;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+
+.bloco-esquerda {
+  background-color: rgb(132, 152, 255);
+  height: 300px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  background-image: url("https://cdn.pixabay.com/photo/2025/03/30/18/42/people-9503363_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+
+
+.bloco-direita {
+  background-color: rgb(132, 152, 255);
+  height: 300px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  background-image: url("https://cdn.pixabay.com/photo/2019/03/01/02/48/store-4027251_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  
+}
+
+.bloco-direita img {
+  width: 100%;
+  zoom: 200%;
+}
+
+.bloco-img {
+  height: 300px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding-top: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.bloco-img img {
+  display: block;
+  width: 225px;
+  margin: 0 auto;
+}
+
+.bloco-img a {
+  color: red;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #000;
+  transition: ease 1s;
+
+}
+
+.bloco-img a:hover {
+  color: black;
+}
+
+iframe {
+  background-color: rgb(132, 152, 255);
+  height: 300px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #6b6b6b;
+}
