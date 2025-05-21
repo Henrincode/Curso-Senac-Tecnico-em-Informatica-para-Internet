@@ -1,96 +1,86 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Aladin", system-ui;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Aladin", system-ui;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    flex-wrap: wrap;
-    background-image: url(https://cdn.pixabay.com/photo/2023/08/26/09/04/strawberry-8214486_1280.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    height: 100vh;
-    backdrop-filter: blur(10px) saturate(2);
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+  /* background */
+  background-image: url(https://cdn.pixabay.com/photo/2023/08/26/09/04/strawberry-8214486_1280.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter: blur(10px) saturate(2);
 }
 
-header {
-    color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 1000px;
-    margin-top: 20px;
-    backdrop-filter: blur(10px) saturate(2);
+/* HEADER */
 
+header {
+    display: flex;
+    justify-content: center;
+  width: 100%;
+
+  color: #fff;
+
+  /* Testes */
+  background-color: #250902;
+  width: 100%;
+  height: 70px;
+}
+
+#header-box {
+  width: 1000px;
+  /* testes */
+  background-color: blue;
 }
 
 .logo {
-    font-size: 50px;
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    font-size: 30px;
-    flex-grow: 1;
 }
 
 nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
-    list-style: none;
-    width: 730px;
 }
 
 nav li {
-    transition: 0.2s;
 }
 
 nav li:hover {
-    font-size: 40px;
-    color: aqua;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* MAIN */
 
 main {
-    /* background-color: blanchedalmond; */
     display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    align-items: stretch;
-    justify-content: space-between;
+    justify-content: center;
+  width: 100%;
+
+  color: #fff;
+
+  /* Testes */
+  background-color: #cecece;
+  width: 100%;
+  height: 70px;
+
+}
+
+#main-box{
+    background-color: aqua;
     width: 1000px;
 }
 
-article, aside {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    text-align: center;
-}
-
 article {
-background-color: azure;
-width: 680px;
-height: 500px;
 }
 
 aside {
-background-color: azure;
-width: 300px;
 }
