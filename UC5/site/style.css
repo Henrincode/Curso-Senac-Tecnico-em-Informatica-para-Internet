@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Merienda';
+  font-family: "Merienda";
   font-weight: normal;
   font-size: 18px;
 }
@@ -23,26 +23,58 @@ body {
   backdrop-filter: blur(10px) saturate(2);
 }
 
-#destaque {
+#destaque-topo {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 500px;
+  height: 480px;
   color: #fff;
+  /* background */
   background-color: #03071e;
 }
 
-#destaque h1{
+#destaque-topo img {
+  display: block;
+  mask-image: linear-gradient(to left,
+      transparent,
+      #fff 20%,
+      #fff 80%,
+      transparent);
+
+  /* teste */
+  -webkit-user-drag: none;
+
+}
+
+#destaque-topo-box {
+  position: relative;
+  width: 1000px;
+  height: auto;
+}
+
+#destaque-topo-box > .texto {
+  position: absolute;
+  bottom: 30px;
+  padding: 10px;
+  margin: 0 80px;
+  border-radius: 8px;
+  border: solid 2px #31313154;
+  background-color: #03071e54;
+  backdrop-filter: blur(4px);
+  text-shadow: 1px 1px 0 #000;
+  /* top: 50%;
+  transform: translateY(-50%); */
+}
+
+#destaque h1 {
   font-size: 30px;
   font-family: "aladin";
   font-weight: normal;
 }
 
 /* HEADER */
-
-
 
 header {
   display: flex;
@@ -71,7 +103,7 @@ header {
 
 .logo {
   font-size: 50px;
-  
+
   /* teste */
   /* display: none; */
 }
@@ -82,9 +114,6 @@ nav {
   flex-wrap: wrap;
   justify-content: flex-end;
   flex-grow: 1;
-  
-  /* teste */
-  justify-content: center;
 }
 
 nav ul {
@@ -93,12 +122,11 @@ nav ul {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
-  /* width: 615px; */
   list-style: none;
 }
 
 nav li {
-  font-size: 20px;
+  font-size: 23px;
   margin-left: 20px;
   transition: 0.1s;
 }
@@ -124,11 +152,6 @@ main {
   width: 100%;
 }
 
-.destaque-box {
-  width: 1000px;
-}
-
-
 #destaque2 {
   display: flex;
   flex-direction: row;
@@ -148,8 +171,6 @@ main {
   background-color: #fff;
 }
 
-article {
-}
+article {}
 
-aside {
-}
+aside {}
