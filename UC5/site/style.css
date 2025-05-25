@@ -99,6 +99,7 @@ header {
   align-items: baseline;
   width: 1200px;
   margin: 10px 0;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .logo {
@@ -146,9 +147,10 @@ nav li:hover {
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -169,24 +171,16 @@ main {
   margin: 20px 0;
   padding: 10px;
   box-shadow: 0 0 10px #000;
-  text-shadow: 1px 1px 3px #000;
+  text-shadow: 0 0 3px #000, 1px 1px 3px #000;
   border-radius: 10px;
   background-color: rgba(55, 6, 23, 0.2);
   color: #fff;
 }
 
-#pessoa {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  /* width: 300px; */
-  height: 100%;
-}
-
 #destaque2-mensagem h1 {
   font-size: 32px;
   margin-bottom: 20px;
-
+  
 }
 
 #destaque2-mensagem p {
@@ -195,8 +189,19 @@ main {
   margin-top: 10px;
 }
 
+#pessoa {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: stretch;
+  align-items: flex-end;
+}
+
 #destaque2 img {
   margin-left: 30px;
+  
+  /* teste */
+  -webkit-user-drag: none;
 }
 
 #destaque3 {
