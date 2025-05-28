@@ -10,17 +10,17 @@
 body {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  flex-wrap: wrap;
   min-height: 100vh;
+
   /* background */
   background-image: url(https://cdn.pixabay.com/photo/2023/08/26/09/04/strawberry-8214486_1280.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
-  filter: ;
   backdrop-filter: blur(10px) saturate(2);
 }
 
@@ -31,7 +31,9 @@ body {
   justify-content: center;
   width: 100%;
   height: 480px;
+  
   color: #fff;
+
   /* background */
   background-color: #03071e;
 }
@@ -219,17 +221,20 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 
-  margin-bottom: 20px;
+  width: 1200px;
+
+  margin: 20px 0;
 }
 
 .itens {
   background-color: #edede9;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 30px;
+  /* justify-content: center; */
+  margin: 10px;
+  margin-top: 10px;
   width: 280px;
   height: 400px;
 
@@ -299,7 +304,7 @@ footer {
 iframe {
   display: block;
   border-radius: 20px;
-  margin: 10px 0;
+  margin: 30px 0;
   padding: 0;
   border: 0;
   width: 100%;
