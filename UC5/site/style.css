@@ -10,7 +10,7 @@
 body {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: start;
   align-items: center;
   min-height: 100vh;
@@ -22,59 +22,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   backdrop-filter: blur(10px) saturate(2);
-}
-
-#destaque-topo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  height: 480px;
-  
-  color: #fff;
-
-  /* background */
-  background-color: #03071e;
-}
-
-#destaque-topo img {
-  display: block;
-  mask-image: linear-gradient(to left,
-      transparent,
-      #fff 20%,
-      #fff 80%,
-      transparent);
-
-  /* teste */
-  -webkit-user-drag: none;
-
-}
-
-#destaque-topo-box {
-  position: relative;
-  width: 1200px;
-  height: auto;
-}
-
-#destaque-topo-box > .texto {
-  position: absolute;
-  bottom: 30px;
-  padding: 10px;
-  margin: 0 80px;
-  border-radius: 8px;
-  border: solid 2px #31313154;
-  background-color: #03071e54;
-  backdrop-filter: blur(4px);
-  text-shadow: 1px 1px 0 #000;
-  /* top: 50%;
-  transform: translateY(-50%); */
-}
-
-#destaque h1 {
-  font-size: 30px;
-  font-family: "aladin";
-  font-weight: normal;
 }
 
 /* HEADER */
@@ -89,7 +36,8 @@ header {
   width: 100%;
   color: #fff;
   /* backgroud */
-  background-color: #c1121f;
+  /* background-color: #c1121f; */
+  background-color: #b5179e;
   border-top: solid 4px #780000;
   border-bottom: solid 4px #780000;
 }
@@ -101,7 +49,7 @@ header {
   justify-content: space-between;
   align-items: baseline;
   width: 1200px;
-  margin: 10px 0;
+  margin: 10px;
   text-shadow: 1px 1px 3px #000;
 }
 
@@ -151,7 +99,7 @@ nav li:hover {
 main {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -160,18 +108,19 @@ main {
 #destaque2 {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  width: 1200px;
+  max-width: 1200px;
   min-height: 320px;
   /* padding: 20px 0; */
 }
 
 #destaque2-mensagem {
   flex-grow: 1;
-  width: 500px;
-  margin: 20px 0;
+  /* width: 500px; */
+  max-width: 100%;
+  margin: 20px;
   padding: 10px;
   box-shadow: 0 0 10px #000;
   text-shadow: 0 0 3px #000, 1px 1px 3px #000;
@@ -223,7 +172,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
 
-  width: 1200px;
+  max-width: 1200px;
 
   margin: 20px 0;
 }
@@ -273,10 +222,12 @@ footer {
 }
 
 #footer-box {
+  padding: 30px;
   width: 1200px;
   display: flex;
+  /* align-self: center; */
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
 }
 
@@ -284,9 +235,9 @@ footer {
   background-color: #878787;
   color: #fff;
   display: flex;
-  padding: 10px;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
   width: 300px;
   align-self: center;
   border-radius: 10px 0 0 10px;
@@ -299,12 +250,13 @@ footer {
 
 #mapa {
   flex-grow: 1;
+  width: 100%;
 }
 
 iframe {
   display: block;
   border-radius: 20px;
-  margin: 30px 0;
+  /* margin: 30px 0; */
   padding: 0;
   border: 0;
   width: 100%;
@@ -314,3 +266,76 @@ iframe {
 article {}
 
 aside {}
+
+/* media */
+
+/* tablet */
+@media (max-width: 1024px) {
+
+  #header-box {
+    justify-content: center;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #header-box {
+    width: 100%;
+  }
+  #destaque2 {
+    width: 100%;
+  }
+
+  #destaque-box3 {
+    width: 100%;
+  }
+
+  #footer-box {
+    width: 100%;
+  }
+
+  #links {
+    /* margin-left: 30px; */
+  }
+
+  #mapa {
+    /* margin-right: 30px; */
+  }
+}
+
+/* celular */
+@media (max-width: 786px) {
+
+  nav {
+    display: none;
+  }
+
+  #destaque2 {
+    flex-wrap: wrap;
+  }
+
+  #destaque2-mensagem {
+    /* margin: 10px; */
+  }
+
+  #footer-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #links {
+    /* margin-top: 20px; */
+    border-radius: 10px 10px 0 0;
+  }
+
+  #mapa {
+    width: 100%;
+    /* padding: 0 20px 20px 20px; */
+  }
+
+  iframe {
+    margin: 0;
+  }
+
+}
