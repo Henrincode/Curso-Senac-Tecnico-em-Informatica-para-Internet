@@ -38,8 +38,10 @@ header {
   /* backgroud */
   /* background-color: #c1121f; */
   background-color: #b5179e;
-  border-top: solid 4px #780000;
-  border-bottom: solid 4px #780000;
+  /* border-top: solid 4px #780000; */
+  border-top: solid 4px #5c0a50;
+  /* border-bottom: solid 4px #780000; */
+  border-bottom: solid 4px #5c0a50;
 }
 
 #header-box {
