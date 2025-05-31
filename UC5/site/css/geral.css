@@ -31,6 +31,7 @@ body {
 /* HEADER */
 
 header {
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -41,7 +42,8 @@ header {
   color: #fff;
   /* backgroud */
   /* background-color: #c1121f; */
-  background-color: #b5179e;
+  background-color: rgba(181, 23, 157, 0.8);
+  /* background-color: #c0529aa1; */
   /* border-top: solid 4px #780000; */
   border-top: solid 4px #5c0a50;
   /* border-bottom: solid 4px #780000; */
@@ -59,11 +61,37 @@ header {
   text-shadow: 1px 1px 3px #000;
 }
 
+#header-box a {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+
+
 .logo {
+  cursor: pointer;
+  position: relative;
+  transform-origin: left center;
   font-size: 50px;
+  transition: 0.1s;
 
   /* teste */
   /* display: none; */
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.logo .text {
+  font-size: 50px;
+}
+
+.logo .texto-sup {
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 nav {
@@ -87,6 +115,7 @@ nav li {
   font-size: 23px;
   margin-left: 20px;
   transition: 0.1s;
+  transform-origin: center bottom;
 }
 
 nav ul:has(li:hover) li:not(:hover) {
@@ -95,7 +124,6 @@ nav ul:has(li:hover) li:not(:hover) {
 
 nav li:hover {
   cursor: pointer;
-  transform-origin: center bottom;
   transform: scale(1.5);
   filter: drop-shadow(0 0 10px #000);
 }
@@ -111,7 +139,6 @@ nav li:hover {
   right: 0;
   margin: 11px;
   padding: 8px;
-  border: solid 3px #7c7474;
   border-radius: 10px;
   background-color: #444;
 }
@@ -128,8 +155,9 @@ nav li:hover {
   top: 100%;
   right: 0;
   background-color: blueviolet;
+  border: solid 4px #5c0a50;
   border-radius: 0 0 10px 10px;
-  margin-top: 13px;
+  margin-top: 11px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -195,7 +223,7 @@ main {
 #destaque2-mensagem h1 {
   font-size: 32px;
   margin-bottom: 20px;
-  
+
 }
 
 #destaque2-mensagem p {
@@ -214,7 +242,7 @@ main {
 
 #destaque2 img {
   margin-left: 30px;
-  
+
   /* teste */
   -webkit-user-drag: none;
 }
@@ -241,6 +269,7 @@ main {
 }
 
 .itens {
+  z-index: 1;
   cursor: pointer;
   background-color: #edede9;
   display: flex;
@@ -261,15 +290,20 @@ main {
   background-color: #444;
 }
 
+.itens:hover img {
+  filter: saturate(0);
+}
+
 .itens img {
   object-fit: cover;
+  filter: saturate(2);
   object-position: center;
   /* background-color: #c1121f; */
   width: 280px;
   height: 320px;
   transition: 0.5s;
 
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
 }
 
 .itens h1 {
@@ -282,7 +316,7 @@ main {
 }
 
 footer {
-  background-color: #5d5d5d;
+  background-color: #333;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -301,7 +335,7 @@ footer {
 }
 
 #links {
-  background-color: #878787;
+  background-color: #555;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -312,9 +346,20 @@ footer {
   border-radius: 10px 0 0 10px;
 }
 
+#links h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
 #links ul {
   list-style: none;
 
+}
+
+#links .geo {
+  margin-top: 10px;
+  font-size: 12px;
+  font-family: "Montserrat";
 }
 
 #mapa {
@@ -360,6 +405,7 @@ aside {}
   #header-box {
     width: 100%;
   }
+
   #destaque2 {
     width: 100%;
   }
