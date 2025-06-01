@@ -68,10 +68,10 @@ header {
 }
 
 
-.logo {
+#header-box .logo {
   cursor: pointer;
   position: relative;
-  transform-origin: left center;
+  transform-origin: left top;
   font-size: 50px;
   transition: 0.1s;
 
@@ -79,15 +79,15 @@ header {
   /* display: none; */
 }
 
-.logo:hover {
+#header-box .logo:hover {
   transform: scale(1.2);
 }
 
-.logo .text {
+#header-box .logo .text {
   font-size: 50px;
 }
 
-.logo .texto-sup {
+#header-box .logo .texto-sup {
   font-size: 18px;
   position: absolute;
   top: 0;
@@ -128,6 +128,10 @@ nav li:hover {
   filter: drop-shadow(0 0 10px #000);
 }
 
+#fullmenu i {
+  font-size: 40px;
+}
+
 /* DROPMENU */
 
 #dropmenu {
@@ -140,12 +144,11 @@ nav li:hover {
   margin: 11px;
   padding: 8px;
   border-radius: 10px;
-  background-color: #444;
+  background-color: rgba(68, 68, 68, 0.6);
 }
 
 #dropmenu i {
   font-size: 40px;
-  color: white;
 }
 
 #dropmenu-list {
@@ -196,7 +199,7 @@ main {
   width: 100%;
 }
 
-#destaque2 {
+#destaque {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -207,7 +210,7 @@ main {
   /* padding: 20px 0; */
 }
 
-#destaque2-mensagem {
+#destaque-mensagem {
   flex-grow: 1;
   /* width: 500px; */
   max-width: 100%;
@@ -220,13 +223,13 @@ main {
   color: #fff;
 }
 
-#destaque2-mensagem h1 {
+#destaque-mensagem h1 {
   font-size: 32px;
   margin-bottom: 20px;
 
 }
 
-#destaque2-mensagem p {
+#destaque-mensagem p {
   font-family: "Montserrat";
   font-size: 24px;
   margin-top: 10px;
@@ -240,14 +243,14 @@ main {
   align-items: flex-end;
 }
 
-#destaque2 img {
+#destaque img {
   margin-left: 30px;
 
   /* teste */
   -webkit-user-drag: none;
 }
 
-#destaque3 {
+#corpo {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -257,7 +260,7 @@ main {
   background-color: #fff;
 }
 
-.destaque-box3 {
+.corpo-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -347,7 +350,7 @@ footer {
 }
 
 #links h1 {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -402,7 +405,11 @@ aside {}
     display: block;
   }
 
-  #header-box {
+  #destaque {
+    flex-wrap: wrap;
+  }
+
+  /* #header-box {
     width: 100%;
   }
 
@@ -416,7 +423,7 @@ aside {}
 
   #footer-box {
     width: 100%;
-  }
+  } */
 
   #links {
     /* margin-left: 30px; */
