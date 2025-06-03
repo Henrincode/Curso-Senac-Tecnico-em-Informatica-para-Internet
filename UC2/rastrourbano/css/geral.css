@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Lexend";
+    transition: 0.3s;
+}
+
+.teste {
+    background-color: rgba(255, 127, 80, 0.5);
+}
+
+body {
+    background-color: #f4ece3;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .logo {
+    font-size: 50px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* align-content: baseline; */
+    align-items: center;
+    width: 1200px;
+    height: 80px;
+
+    margin: 20px 0;
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    color: #fff;
+    background-color: #c1121f;
+}
+
+nav .busca {
+    flex: 1;
+    /* align-self: center; */
+    display: flex;
+    width: 100%;
+    height: 70%;
+    margin: 0 20px;
+    padding-left: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 30px;
+    font-family: 'Segoe UI Symbol';
+    
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 350px;
+
+    font-size: 20px;
+}
+
+nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+    
+    border-radius: 10px;
+}
+
+li:hover {
+    cursor: pointer;
+    color: #003049;
+    background-color: #f4ece3;
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+main {
+    width: 70%;
+}
+
+#logo {
+    margin-bottom: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#cores {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cores-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 200px;
+
+    border: solid 2px #fff;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #fff;
+    box-shadow: 0 0 20px #8d8d8d;
+    background-color: aqua;
+}
+
+.cores-box p {
+    padding: 10px;
+    border-radius: 10px;
+
+    color: #444;
+    background-color: #fff;
+}
+
+#primaria {
+    background-color: #c1121f;
+}
+
+#secundaria {
+    background-color: #669bbc;
+}
+
+#terciaria {
+    background-color: #f4ece3;
+}
+
+#quartenaria {
+    background-color: #003049;
+}
