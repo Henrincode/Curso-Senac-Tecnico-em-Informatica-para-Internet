@@ -20,8 +20,10 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #003049;
 }
 
 header .logo {
@@ -32,10 +34,12 @@ header .logo {
 
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     /* align-content: baseline; */
     align-items: center;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     height: 80px;
 
     margin: 20px;
@@ -86,4 +90,139 @@ li:hover {
     cursor: pointer;
     color: #003049;
     background-color: #f4ece3;
+}
+
+/* HEADER BANNER */
+
+#header-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+    max-width: 1200px;
+    width: 100%;
+    
+    margin-bottom: 20px;
+}
+
+#header-banner-img-grande {
+    position: relative;
+    width: 700px;
+    height: 500px;
+}
+
+#header-banner-lista-img-pequena {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+.header-banner-img-pequena {
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    height: 240px;
+
+}
+
+#header-banner img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+    object-position: top center;
+}
+
+.header-banner-img-texto {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 10px 40px;
+
+    border-radius: 0 0 10px 10px;
+
+    font-size: 20px;
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+/* ---- MAIN ---- */
+
+/* CATEGORIAS DESTAQUE */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#categorias-destaque {
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1200px;
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+.categorias-destaque-linha {
+    flex: 1;
+    height: 10px;
+    border-radius: 100px;
+    background-color: #777;
+}
+
+/* TITULO */
+
+#categorias-destaque-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    font-size: 50px;
+}
+
+#categorias-destaque-texto {
+    margin: 0 20px;
+
+    color: #777;
+
+}
+
+/* CATEGORIA */
+
+#categorias-destaque-lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 20px 0;
+}
+
+#categorias-destaque-lista img {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100%;
+
+    background-color: #777;
+}
+
+#categorias-destaque-lista p {
+
+    font-size: 20px;
+    text-align: center;
+
+    color: #777;
 }
