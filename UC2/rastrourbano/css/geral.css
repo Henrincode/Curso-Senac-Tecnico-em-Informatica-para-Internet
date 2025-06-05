@@ -14,6 +14,10 @@
     background-color: rgba(255, 127, 80, 0.5);
 }
 
+.flex-1 {
+    flex: 1;
+}
+
 body {
     background-color: #f4ece3;
 }
@@ -23,6 +27,8 @@ header {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+
+    padding-top: 100px;
     background-color: #003049;
 }
 
@@ -33,6 +39,10 @@ header .logo {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -42,13 +52,14 @@ nav {
     width: 100%;
     height: 80px;
 
-    margin: 20px;
+    /* margin: 20px; */
     padding: 0 20px;
 
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
 
     color: #fff;
-    background-color: #c1121f;
+    background-color: rgba(193, 18, 30);
+    backdrop-filter: blur(8px);
 }
 
 nav .busca {
@@ -92,78 +103,18 @@ li:hover {
     background-color: #f4ece3;
 }
 
-/* HEADER BANNER */
-
-#header-banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-
-    max-width: 1200px;
-    width: 100%;
-    
-    margin-bottom: 20px;
-}
-
-#header-banner-img-grande {
-    position: relative;
-    width: 700px;
-    height: 500px;
-}
-
-#header-banner-lista-img-pequena {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 20px;
-}
-
-.header-banner-img-pequena {
-    position: relative;
-    max-width: 480px;
-    width: 100%;
-    height: 240px;
-
-}
-
-#header-banner img {
-    width: 100%;
-    height: 100%;
-
-    border-radius: 10px;
-
-    object-fit: cover;
-    object-position: top center;
-}
-
-.header-banner-img-texto {
-    position: absolute;
-    bottom: 0;
-
-    width: 100%;
-
-    padding: 10px 40px;
-
-    border-radius: 0 0 10px 10px;
-
-    font-size: 20px;
-
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-
-}
-
 /* ---- MAIN ---- */
-
-/* CATEGORIAS DESTAQUE */
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    height: 2000px;
+    
 }
+
+/* CATEGORIAS DESTAQUE */
 
 #categorias-destaque {
 
@@ -177,7 +128,6 @@ main {
 }
 
 .categorias-destaque-linha {
-    flex: 1;
     height: 10px;
     border-radius: 100px;
     background-color: #777;
@@ -205,8 +155,13 @@ main {
 #categorias-destaque-lista {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 
+    /* margin: 20px 0; */
+}
+
+.categorias-destaque-categoria {
     margin: 20px 0;
 }
 
@@ -215,6 +170,8 @@ main {
     height: 200px;
 
     border-radius: 100%;
+
+    object-fit: cover;
 
     background-color: #777;
 }

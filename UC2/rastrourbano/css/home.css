@@ -1,0 +1,153 @@
+@import url("geral.css");
+
+/* HEADER BANNER */
+
+#header-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+    max-width: 1200px;
+    width: 100%;
+    
+    margin-bottom: 20px;
+}
+
+#header-banner-img-grande {
+    position: relative;
+    width: 700px;
+    height: 500px;
+}
+
+#header-banner-lista-img-pequena {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+.header-banner-img-pequena {
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    height: 240px;
+
+}
+
+#header-banner img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+    object-position: top center;
+}
+
+#header-banner img:hover {
+    filter: saturate(0);
+}
+
+.header-banner-img-texto {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 10px 40px;
+
+    border-radius: 0 0 10px 10px;
+
+    font-size: 20px;
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+/* LISTA-PRODUTOS */
+
+#lista-produtos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.produto {
+    width: 200px;
+}
+
+.imagem-texto {
+    position: relative;
+}
+
+.produto img {
+    display: block;
+    width: 100%;
+    height: 250px;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.produto .texto {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    
+    padding: 10px 5px;
+
+    border-top: solid 2px #fff;
+
+    border-radius: 0 0 10px 10px;
+
+    font-size: 18px;
+    text-align: center;
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.produto p {
+    margin-top: 4px;
+    padding: 4px;
+
+    border: solid 1px #ccc;
+    border-radius: 0 0 3px 3px;
+
+    color: green;
+    text-align: center;
+    font-size: 20px;
+    /* font-weight: bold; */
+
+    background-color: #fff;
+}
+
+.produto .preco-riscado {
+    color: tomato;
+    /* font-size: 15px; */
+    text-decoration: line-through double rgba(61, 61, 61, 0.5);
+
+}
+
+.produto .preco {
+}
+
+.produto:hover {
+    cursor: pointer;
+}
+
+.produto:hover .texto {
+    opacity: 1;
+}
