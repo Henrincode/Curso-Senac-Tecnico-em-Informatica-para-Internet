@@ -50,7 +50,7 @@ function listarProdutos(filtro = "tudo") {
     localInject.innerHTML = ""
     if(filtro == "tudo") {
         produtos.forEach(produto => localInject.innerHTML += `
-            <a href="/produto/${produto.id}">
+            <a href="/produto/?produto=${produto.id}">
             <div class="produto">
                 <div class="imagem-texto">
                     <img src="img/produtos/${produto.imagem}" alt="">
