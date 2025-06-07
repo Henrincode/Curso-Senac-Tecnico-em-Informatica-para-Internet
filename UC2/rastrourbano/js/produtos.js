@@ -31,16 +31,44 @@ produtos = [{
     descricao: "Coturno Feminino Bota Tratorada Preto bota preta confortável",
     preco: 59.90,
     precoAntigo: 149.90,
-    categorias: ["Feminino", "bota", "preto"],
+    categorias: ["Feminino", "bota", "Preto"],
     imagem: "sapatos/001.webp"
 },{
     id: 1006,
     descricao: "Bota Coturno Adventure Cano Curto Masculino Motoqueiro",
     preco: 104.90,
     precoAntigo: 0,
-    categorias: ["Masculino", "bota", "marrom"],
+    categorias: ["Masculino", "bota", "Marrom"],
     imagem: "sapatos/002.webp"
-}]
+},{
+    id: 1007,
+    descricao: "Bolsa Feminina GRANDE Escolar Trabalho",
+    preco: 57.42,
+    precoAntigo: 139.00,
+    categorias: ["Feminino", "Bolsa", "Marrom"],
+    imagem: "bolsas/001.webp"
+},{
+    id: 1008,
+    descricao: "Femininas Escolar Bolsa De Viagem Faculdade Trabalho",
+    preco: 68.00,
+    precoAntigo: 0,
+    categorias: ["Feminino", "Bolsa", "Preto"],
+    imagem: "bolsas/002.webp"
+},{
+    id: 1009,
+    descricao: "Óculos de sol para mulheres no verão sem maquiagem, ponte dupla",
+    preco: 37.99,
+    precoAntigo: 0,
+    categorias: ["Óculos", "Feminino", "Marron"],
+    imagem: "oculos/001.webp"
+},{
+    id: 1010,
+    descricao: "Óculos de sol para mulheres no verão sem maquiagem, ponte dupla",
+    preco: 20.99,
+    precoAntigo: 0,
+    categorias: ["Masculino", "Óculos", "Preto"],
+    imagem: "oculos/002.webp"
+},]
 
 // Funções
 

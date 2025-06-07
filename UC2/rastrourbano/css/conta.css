@@ -10,3 +10,101 @@ header #cabecalho img {
     object-position: center;
     border-radius: 25%;
 }
+
+main #ficha {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    max-width: 1200px;
+    width: 100%;
+
+    height: 550px;
+
+    font-size: 30px;
+}
+
+main #ficha #parte1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+}
+
+main #ficha #foto img {
+    display: block;
+    width: 300px;
+    height: 300px;
+
+    padding-top: 20px;
+
+    border-radius: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+main #ficha #form-botao {
+    width: 600px;
+    height: 60px;
+
+    margin: 0 auto;
+
+    border: 0;
+    border-radius: 10px;
+
+    color: #fff;
+    font-size: 30px;
+
+    background-color: #444;
+}
+
+main #ficha #form-botao:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+
+main #ficha .formulario-coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+main #ficha .formulario-linha {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+}
+
+main .coluna-linha {
+    display: flex;
+    flex-direction: column;
+}
+
+main #ficha .formulario-linha .form-texto {
+    color: #444;
+    margin-left: 10px;
+}
+
+main #ficha .form-campo {
+    margin-right: 20px;
+}
+
+main #ficha .formulario-linha input {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 5px 10px 5px 10px;
+
+    border: solid 3px #888;
+    border-radius: 10px;
+
+    color: #444;
+    font-size: 20px;
+}
