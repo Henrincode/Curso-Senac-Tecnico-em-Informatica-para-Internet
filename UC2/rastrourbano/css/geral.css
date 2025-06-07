@@ -20,6 +20,10 @@ a {
     background-color: rgba(255, 127, 80, 0.5);
 }
 
+.flex-0 {
+    flex: 0;
+}
+
 .flex-1 {
     flex: 1;
 }
@@ -61,7 +65,8 @@ header #cabecalho {
 }
 
 header #cabecalho h1 {
-    font-size: 40px;
+    font-size: 30px;
+    
 }
 
 /* ----- NAV ----- */
@@ -138,7 +143,7 @@ main {
     flex-direction: column;
     align-items: center;
 
-    height: 2000px;
+    /* height: 2000px; */
 
 }
 
@@ -210,4 +215,45 @@ main {
     text-align: center;
 
     color: #777;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: #444;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    width: 100%;
+
+    color: #fff;
+}
+
+#footer .footer-listas{
+    margin: 20px 0;
+    
+}
+
+#footer .footer-listas ul {
+    list-style: none;
+}
+
+#footer .footer-listas li {
+    border-radius: 10px;
+
+}
+
+#footer .footer-listas li:hover {
+
+    padding: 4px 10px;
 }
