@@ -1,0 +1,63 @@
+/* PADRÃO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    border-radius: inherit;
+
+    transition: 0.3s;
+}
+
+body {
+    /* background-color: #faf3dd; */
+}
+
+.teste {
+    box-shadow: inset 0 0 0 1px red;
+    background-color: rgba(165, 42, 42, 0.5);
+}
+
+/* FILTROS */
+.filtro-fundo {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.filtro-fundo img {
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+.filtro-blur {
+    width: inherit;
+    height: inherit;
+
+    backdrop-filter: blur(10px) saturate(2);
+}
+
+/* NAV */
+
+/* HEADER */
+header.topo-padrao {
+    padding-top: 100px;
+    background-color: #003049;
+}
+
+header.topo-index {
+    height: 400px;
+    background-color: #003049;
+
+
+}
