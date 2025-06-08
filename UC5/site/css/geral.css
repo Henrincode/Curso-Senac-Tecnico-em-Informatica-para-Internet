@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap');
+
 /* PADRÃO */
 * {
     box-sizing: border-box;
@@ -42,6 +44,10 @@ body {
     justify-content: center;
 }
 
+.items-end {
+    align-items: end;
+}
+
 /* FILTROS */
 .filtro-fundo {
     position: relative;
@@ -72,7 +78,7 @@ body {
 }
 
 /* NAV */
-nav#nav-fixed {
+#nav-fixed {
     position: fixed;
     top: 0;
     z-index: 100;
@@ -82,26 +88,43 @@ nav#nav-fixed {
     justify-content: center;
 
     width: 100%;
-    height: 200px;
 
-    padding: 0 20px;
+    padding: 10px;
 
     border-top: solid 4px #5c0a50;
     border-bottom: solid 4px #5c0a50;
 
     color: #fff;
+    font-family: "Merienda";
+    text-shadow: 1px 1px 3px #000;
 
     background-color: rgba(181, 23, 157, 0.8);
     ;
 }
 
+#nav-fixed .logo {
+    position: relative;
+}
+
+#nav-fixed .texto {
+    font-size: 50px;
+}
+
+#nav-fixed .texto-sup {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 18px;
+}
+
 /* HEADER */
 header.topo-padrao {
-    padding-top: 100px;
+    padding-top: 10px;
     background-color: #003049;
 }
 
 header.topo-index {
-    /* height: 400px; */
-    background-color: #003049;
+    /* min-height: 420px; */
+    /* background-color: #003049; */
 }
