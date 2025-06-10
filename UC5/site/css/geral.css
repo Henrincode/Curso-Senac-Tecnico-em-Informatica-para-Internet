@@ -18,7 +18,12 @@
     }
 
     body {
-        /* height: 100vh; */
+        background-color: #30343f;
+    }
+
+    main {
+        padding: 20px 0;
+        background-color: #fff;
     }
 
     .teste {
@@ -56,8 +61,16 @@
         flex-direction: column;
     }
 
+    .wrap {
+        flex-wrap: wrap;
+    }
+
     .wrap-no {
         flex-wrap: nowrap;
+    }
+
+    .gap-20 {
+        gap: 20px;
     }
 
     .justify-center {
@@ -68,8 +81,16 @@
         justify-content: end;
     }
 
+    .justify-around {
+        justify-content: space-around;
+    }
+
     .justify-between {
         justify-content: space-between;
+    }
+
+    .justify-evenly {
+        justify-content: space-evenly;
     }
 
     .items-start {
@@ -86,10 +107,6 @@
 
     .items-baseline {
         align-items: baseline;
-    }
-
-    .gap-20 {
-        gap: 20px;
     }
 
     /* FILTROS para fundos */
@@ -222,4 +239,42 @@
 
     #topo-pessoa img {
         margin-bottom: -20px;
+    }
+
+    /* MAIN */
+
+    #categorias-main {}
+
+    #categorias-main .linha {
+        width: 100%;
+        height: 4px;
+        border-radius: 10px;
+        background-color: #777;
+    }
+
+    #categorias-main .titulo {
+        color: #777;
+        font-size: 40px;
+        font-family: "Merienda";
+    }
+
+    #categorias-main #lista {
+        margin: 20px 0;
+    }
+
+    #lista .categoria {
+        width: 150px;
+    }
+
+    #categorias-main .imagem img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+
+        filter: saturate(1.5);
+    }
+
+    #categorias-main #lista .titulo {
+        font-size: 20px;
+        text-align: center;
     }
