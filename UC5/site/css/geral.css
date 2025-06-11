@@ -36,6 +36,16 @@
         cursor: pointer;
     }
 
+    .display-grid {
+        display: grid;
+
+        max-width: 1200px;
+        width: 100%;
+    }
+    .grid-column-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
     /* CONTAINER */
     .container {
         display: flex;
