@@ -20,11 +20,11 @@ const categorias = [
   {
     id: 1001,
     nome: "Bolos de Aniversário",
-    capa: "misc/bolo-001",
+    capa: "/misc/bolo-001.jpg",
   },{
     id: 1002,
     nome: "Bolos Infantis",
-    capa: "/misc/bolo-004",
+    capa: "/misc/bolo-004.jpg",
   },{
     id: 1003,
     nome: "Docinhos de Festa",
@@ -40,7 +40,7 @@ const categorias = [
   },{
     id: 1006,
     nome: "Sobremesas",
-    capa: "/misc/sobremesa-001"
+    capa: "/misc/sobremesa-001.jpg"
   },{
     id: 1007,
     nome: "Bolos de Travessa",
@@ -49,14 +49,26 @@ const categorias = [
     id: 1008,
     nome: "Pavês",
     capa: "/misc/pave-001.jpg"
+  },{
+    id: 1009,
+    nome: "Panetones e Choc...",
+    capa: "/misc/panetone-001.jpg"
+  },{
+    id: 1010,
+    nome: "Ovos de Páscoa",
+    capa: "/misc/pascoa-001.jpg"
   }
 ];
 
-const teste = categorias.forEach(categoria => {
-    
-    const capa = produtos.find(produto => produto.id === categoria.capa).capa
+const listaCategorias = document.querySelector("#lista")
 
-    console.log(`
-    div nome: ${categoria.nome}
-    div img: ${capa}
-    `)})
+categorias.forEach(categoria => {
+  listaCategorias.innerHTML += `
+    <div class="categoria">
+        <div class="imagem">
+            <img src="/img${categoria.capa}" alt="">
+        </div>
+        <h2 class="titulo">${categoria.nome}</h2>
+    </div>
+  `
+})
