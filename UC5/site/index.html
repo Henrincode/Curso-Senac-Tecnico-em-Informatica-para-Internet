@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ana Marson Confeiteira</title>
-    <link rel="stylesheet" href="/css/geral.css" />
-  </head>
 
-  <body>
-    <!-- NAVI -->
-    <header id="nav">
-      <nav class="nav-container">
-        <a href="#">
-          <div class="logo">
-            <div class="logo-texto">Ana Marson</div>
-            <div class="logo-textosup">Confeiteira</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Doces, bolos, pães e salgados artesanais feitos com carinho por Ana Marson. Sinta o sabor especial de cada receita." />
+  <title>Ana Marson Confeiteira</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
+  <link rel="stylesheet" href="/css/home.css" />
+</head>
+
+<body>
+
+  <!-- HEADER / NAVI -->
+  <header id="nav">
+    <nav class="nav-container">
+      <a href="/" aria-label="Página inicial">
+        <div class="logo">
+          <h1 class="logo-texto">Ana Marson<span class="logo-textosup">Confeiteira</span></h1>
+        </div>
+      </a>
+      <ul class="links">
+        <li><a href="#">Cardápio</a></li>
+        <li><a href="#">Depoimentos</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+        <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="#" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Container visual para o fundo com imagem e blur -->
+    <div class="filtro-fundo">
+      <img class="filtro-imagem" style="object-position: 50% 85%" src="/img/wallpapers/wallpaper-001.jpeg" alt=""
+        aria-hidden="true" />
+      <div class="filtro-blur">
+        
+        <!-- Seção real de conteúdo -->
+        <section id="bem-vindo">
+          <div class="container">
+            <div class="mensagem">
+              <h2>Bem-vindo ao Sabor Artesanal de Ana Marson!</h2>
+              <p> Doces, bolos, pães e salgados preparados com carinho e
+                dedicação. </p>
+              <p> Cada receita é feita com ingredientes selecionados, criatividade
+                e aquele toque caseiro que faz toda a diferença. </p>
+              <p> Descubra o prazer de saborear momentos especiais! </p>
+            </div>
+            <div class="confeiteira">
+              <img src="/img/misc/pessoa-01.png" alt="" aria-hidden="true" />
+            </div>
           </div>
-        </a>
-        <ul class="links">
-          <li><a href="#">Cardápio</a></li>
-          <li><a href="#">Depoimentos</a></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Whatsapp</a></li>
-        </ul>
-      </nav>
-    </header>
+        </section>
+      </div>
+    </div>
+  </main>
 
-    <!-- HEADER -->
+  <!-- FOOTER -->
+</body>
 
-    <!-- MAIN -->
-
-    <!-- FOOTER -->
-  </body>
 </html>
