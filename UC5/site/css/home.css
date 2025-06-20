@@ -1,0 +1,63 @@
+@import url(/css/geral.css);
+
+/* MAIN */
+
+#bem-vindo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 100%;
+
+  color: #fff;
+  font-family: "Poppins";
+}
+
+#bem-vindo .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  max-width: 1200px;
+  width: 100%;
+
+  padding: 122px 10px 20px 10px;
+}
+
+#bem-vindo .mensagem {
+  margin: 20px;
+  padding: 10px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px #000;
+  text-shadow: 0 0 3px #000, 1px 1px 3px #000;
+
+  background-color: rgba(92, 17, 94, 0.315);
+}
+
+#bem-vindo h2 {
+  margin-bottom: 20px;
+
+  font-family: "Merienda";
+  font-size: 32px;
+}
+
+#bem-vindo p {
+  margin-top: 10px;
+
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 24px;
+}
+
+#bem-vindo .confeiteira {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+#bem-vindo .confeiteira img {
+  display: block;
+  margin-bottom: -20px;
+}
