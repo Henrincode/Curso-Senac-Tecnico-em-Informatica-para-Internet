@@ -62,6 +62,31 @@
   margin-bottom: -20px;
 }
 
+/* Lista de categorias */
+
+#categorias-lista {
+  flex-wrap: wrap;
+  gap: 20px 40px;
+}
+
+#categorias-lista img {
+  display: block;
+  width: 200px;
+  border-radius: 10%;
+  object-fit: cover;
+  object-position: center center;
+  aspect-ratio: 1 / 1;
+  filter: saturate(1.5);
+}
+
+#categorias-lista .titulo {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Merienda";
+}
+
+/* @MEDIA */
+
 @media (max-width: 920px) {
   #bem-vindo .confeiteira {
     display: none;
