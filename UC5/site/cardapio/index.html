@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
-    <link rel="stylesheet" href="/css/contato.css" />
+    <link rel="stylesheet" href="/css/cardapio.css" />
 </head>
 
 <body>
@@ -37,46 +37,17 @@
 
     <!-- MAIN -->
     <main>
-        <header id="cabecalho">
+        <section id="produtos" class="separador">
             <div class="container">
-                <h2>Alô, Alô! Vamos adoçar essa conversa?</h2>
-                <p>Se você deseja encomendar delícias artesanais ou tem alguma dúvida, fale comigo! Estou aqui para
-                    atender você com carinho e açúcar na medida certa.</p>
-                <br>
-                <p>Canais de atendimento:</p>
-                <p><i class="bi bi-whatsapp"></i> 19 9 8852-1020</p>
-                <p><i class="bi bi-envelope"></i> empressstore@gmail.com</p>
-                <p><i class="bi bi-geo-alt"></i> 2000, Av. Comendador Thomaz Fortunato, Americana SP</p>
+                <div class="linha"></div>
+                <h2>#Produtos</h2>
+                <div class="linha"></div>
             </div>
-        </header>
+            <div id="produtos-lista" class="container">
+                Carregando...
+            </div>
+        </section>
 
-        <form id="form" action="">
-            <p class="titulo">Ou também pode preencher nosso formulário de contato, responderemos o mais breve possível!</p>
-            <div class="container">
-                <div class="campo">
-                    <label for="f-nome">Seu nome*</label>
-                    <input type="text" id="f-nome" name="nome" placeholder="Digite seu nome" required />
-                </div>
-                <div class="campo">
-                    <label for="f-mail">Seu E-Mail*</label>
-                    <input type="email" id="f-mail" name="mail" placeholder="seu@email.com" required />
-                </div>
-                <div class="campo">
-                    <label for="f-cel">Seu celular / whatsapp</label>
-                    <input type="text" id="f-cel" name="cel" placeholder="(19) 9 8888-4444" />
-                </div>
-            </div>
-            <div class="container">
-                <div class="campo">
-                    <label for="f-mensagem">Mensagem</label>
-                    <textarea id="f-mensagem" name="mensagem" rows="10" placeholder="Escreva sua mensagem"
-                        required></textarea>
-                </div>
-            </div>
-            <div class="con">
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
     </main>
 
     <!-- FOOTER -->
@@ -90,14 +61,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/imask"></script>
-    <script>
-        const inputTelefone = document.getElementById('f-cel');
-
-        IMask(inputTelefone, {
-            mask: '(00) 0 0000-0000'
-        });
-    </script>
+    <script src="/js/cardapio.js"></script>
 </body>
 
 </html>

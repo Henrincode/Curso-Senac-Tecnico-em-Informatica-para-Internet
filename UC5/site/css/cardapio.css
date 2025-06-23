@@ -1,0 +1,30 @@
+@import url(/css/geral.css);
+
+.separador {
+  padding: 122px 0 20px 0;
+}
+
+#produtos-lista {
+  flex-wrap: wrap;
+  gap: 20px 50px;
+}
+
+#produtos-lista img {
+    display: block;
+    width: 350px;
+    height: 450px;
+
+    border-radius: 25px;
+
+    object-fit: cover;
+    object-position: center center;
+    filter: saturate(1.5);
+
+}
+
+#produtos-lista .idp {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Merienda";
+}
