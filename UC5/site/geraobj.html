@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let produtos = []
+
+        for (let i = 76; i <= 78; i++) {
+            const obj = {}
+            obj.id = i + 1000
+            obj.categoria = 1008
+            obj.img = i + ".jpg"
+            produtos.push(obj)
+        }
+
+        produtos.forEach(produto => document.querySelector("body").innerHTML +=
+            `{"id": ${produto.id}, "categoria": ${produto.categoria}, "img": "${produto.img}"},`)
+    </script>
+</body>
+
+</html>
