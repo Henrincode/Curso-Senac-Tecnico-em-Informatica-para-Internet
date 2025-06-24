@@ -20,6 +20,7 @@ async function carregarProdutos() {
 
   produtos.forEach(produto => {
     
+    // Pega o nome da categoria através da ID da mesma
     const categoria = charMax(nomeCategoria(produto.categoria), 15)
 
     produtosLista.innerHTML += `
@@ -31,13 +32,15 @@ async function carregarProdutos() {
   });
 }
 
+// Pega a ID da categoria e retorna seu nome
 function nomeCategoria(id) {
   return categorias.find(categoria => categoria.id === id).nome
 }
 
-function charMax(string, max) {
+// Reduz o tamanho da string maior que max
+function charMax(string, max, txt = "...") {
   if (string.length > max) {
-    return `${string.slice(0, max)}...`;
+    return `${string.slice(0, max) + txt}`;
   }
   return string;
 }
