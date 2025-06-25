@@ -25,6 +25,7 @@
 #form .campo {
   display: flex;
   flex-direction: column;
+  flex: 1;
 
   width: 100%;
 }
@@ -37,14 +38,17 @@
 
 #form label {
   margin-left: 10px;
+  margin-right: 50px;
   color: #444;
   font-family: "Poppins";
   font-size: 24px;
   font-weight: 300;
+  white-space: nowrap;
 }
 
 #form input,
 #form textarea {
+  width: 100%;
   padding: 10px;
 
   border: solid 2px #e0aaff;

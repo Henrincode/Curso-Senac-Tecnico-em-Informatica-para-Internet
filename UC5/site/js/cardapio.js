@@ -27,7 +27,7 @@ async function carregarProdutos() {
       <div class="produto">
         <img src="/img/cardapio/${produto.img}">
         <div class="idp">#${produto.id}</div>
-        <div class="idp">${categoria}</div>
+        <div class="categoria">${categoria}</div>
       </div>`;
   });
 }

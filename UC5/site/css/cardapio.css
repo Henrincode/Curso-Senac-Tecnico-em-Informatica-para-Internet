@@ -1,6 +1,6 @@
 @import url(/css/geral.css);
 
-.separador {
+#produtos {
   padding: 122px 0 20px 0;
 }
 
@@ -23,6 +23,13 @@
 }
 
 #produtos-lista .idp {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 200;
+    font-family: "Merienda";
+}
+
+#produtos-lista .categoria {
     font-size: 30px;
     text-align: center;
     font-weight: 600;
