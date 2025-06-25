@@ -1,0 +1,55 @@
+@import url(/css/geral.css);
+
+.separador {
+  padding: 122px 0 20px 0;
+}
+
+#depoimentos-lista {
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+#depoimentos .depoimento {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+
+  margin-top: 80px;
+  padding: 10px;
+  padding-top: 80px;
+
+  border-radius: 10px;
+
+  background-color: #ffafcc;
+}
+
+#depoimentos img {
+  position: absolute;
+  top: -75px;
+  display: block;
+
+  width: 150px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: center center;
+  aspect-ratio: 1 / 1;
+
+}
+
+#depoimentos h3 {
+  color: #252525;
+  font-size: 30px;
+  font-family: "Merienda";
+}
+
+#depoimentos p {
+  color: #252525;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: 300;
+}
