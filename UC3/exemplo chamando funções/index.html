@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        transition: 0.2s;
+      }
+
+      img {
+        display: block;
+        width: 200px;
+        border-radius: 10px;
+        border: solid 1px #ccc;
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      #banner {
+        width: 640px;
+      }
+
+      #banner-container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+      }
+
+      .img-btn {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titulo">Guto Xavier</h1>
+    <h2 id="profissao">Programador</h2>
+    <button type="button" onmousemove="fnMudar()">Click Aqui</button>
+
+    <button type="button" onclick="fnModoDark()">Modo Dark</button>
+    <button type="button" onclick="fnModoLight()">Modo Light</button>
+    <button type="button" onclick="fnCarnaval()">Modo Carnaval</button>
+    <br />
+    <br />
+
+    <div id="banner-container">
+      <img id="banner" src="01.jpg" alt="" />
+      <div id="container">
+        <img class="img-btn" src="01.jpg" alt="" onclick="fnBanner(0)" />
+        <img class="img-btn" src="02.jpg" alt="" onclick="fnBanner(1)" />
+        <img class="img-btn" src="03.jpg" alt="" onclick="fnBanner(2)" />
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
