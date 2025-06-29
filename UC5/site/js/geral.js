@@ -58,7 +58,7 @@ categorias.forEach(categoria => {
   listaCategorias.innerHTML += `
     <div class="categoria">
         <div class="imagem">
-            <img src="/img${categoria.capa}" alt="">
+            <img src="./img${categoria.capa}" alt="">
         </div>
         <h2 class="titulo">${charMax(categoria.nome, 15)}</h2>
     </div>
