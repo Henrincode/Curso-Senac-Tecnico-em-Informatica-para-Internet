@@ -5,12 +5,12 @@ carregarProdutos()
 
 async function carregarProdutos() {
   // Carregar produtos
-  const responseProdutos = await fetch("/data/produtos.json");
+  const responseProdutos = await fetch("../data/produtos.json");
   const dadosProdutos = await responseProdutos.json();
   produtos.push(...dadosProdutos);
 
   // Carregar categorias
-  const responseCategorias = await fetch("/data/categorias.json");
+  const responseCategorias = await fetch("../data/categorias.json");
   const dadosCategorias = await responseCategorias.json();
   categorias.push(...dadosCategorias);
 
@@ -25,7 +25,7 @@ async function carregarProdutos() {
 
     produtosLista.innerHTML += `
       <div class="produto">
-        <img src="/img/cardapio/${produto.img}">
+        <img src="../img/cardapio/${produto.img}">
         <div class="idp">#${produto.id}</div>
         <div class="categoria">${categoria}</div>
       </div>`;
