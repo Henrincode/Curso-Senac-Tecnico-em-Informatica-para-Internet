@@ -14,6 +14,20 @@ async function carregarProdutos() {
   const dadosCategorias = await responseCategorias.json();
   categorias.push(...dadosCategorias);
 
+  // Renderizar filtro
+  const filtroLista = document.querySelector("#filtros")
+  filtroLista.innerHTML = `<ul>`
+
+  categorias.forEach(categoria => {
+
+    filtroLista.innerHTML += `
+      <li><a href="./?categoria=${categoria.id}">
+        ${charMax(categoria.nome, 22)}
+      </a></li>`
+  })
+
+  filtroLista.innerHTML += `</ul>`
+
   // Renderizar produtos
   const produtosLista = document.querySelector("#produtos-lista");
   produtosLista.innerHTML = "";

@@ -4,19 +4,37 @@
   padding: 122px 0 20px 0;
 }
 
-#produtos-categorias {
+.produtos-categorias {
   flex-wrap: wrap;
   gap: 20px 50px;
 }
 
-#produtos-categorias .categorias {
+#filtros {
   position: sticky;
   top: 130px;
+  bottom: 0;
   width: 300px;
-  height: 500px;
+  border: 2px solid #ff80f4;
   border-radius: 10px;
-  background-color: red;
+  background-color: #ffd2fb;
   align-self: flex-start;
+}
+
+#filtros li {
+  color: #444;
+  font-family: "Poppins";
+  font-size: 18px;
+}
+
+#filtros a {
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  background-color: #ffffff;
+}
+
+#filtros a:hover {
+  background-color: #fff0fe;
 }
 
 #produtos-lista {
@@ -45,7 +63,7 @@
 }
 
 #produtos-lista .categoria {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   font-weight: 600;
   font-family: "Merienda";
