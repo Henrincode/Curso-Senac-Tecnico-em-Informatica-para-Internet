@@ -2,34 +2,6 @@
 const navegacao = document.querySelector("#barra-navegacao");
 const footerListas = document.querySelector("#footer");
 
-navegacao.innerHTML = `
-    <div class="logo">Rastro Urbano</div>
-    <input class="busca" type="text" placeholder="🔍 Buscar...">
-    <ul>
-        <a href="/">
-        <li>
-            <i class="bi bi-house"></i>
-            Home
-        </li>
-
-        </a>
-        <li>
-            <i class="bi bi-gem"></i>
-            Produtos
-        </li>
-        <li>
-            <i class="bi bi-basket"></i>
-            Carrinho
-        </li>
-        <a href="./conta">
-            <li>
-                <i class="bi bi-person-circle"></i>
-                Conta
-            </li>
-        </a>
-    </ul>
-`
-
 footerListas.innerHTML = `
     <div class="footer-listas">
         <h1>Roupas</h1>
