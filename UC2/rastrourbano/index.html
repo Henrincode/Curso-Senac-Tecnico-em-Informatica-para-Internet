@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="./css/home.css">
     <title>Rastro Urbano</title>
 </head>
+
 <body>
-    
+
     <!-- HEADER -->
     <header>
 
-        <nav id="barra-navegacao"></nav>
+        <nav id="barra-navegacao">
+            <div class="logo">Rastro Urbano</div>
+            <input class="busca" type="text" placeholder="🔍 Buscar...">
+            <ul>
+                <a href="../">
+                    <li>
+                        <i class="bi bi-house"></i>
+                        Home
+                    </li>
+
+                </a>
+                <li>
+                    <i class="bi bi-gem"></i>
+                    Produtos
+                </li>
+                <li>
+                    <i class="bi bi-basket"></i>
+                    Carrinho
+                </li>
+                <a href="../conta">
+                    <li>
+                        <i class="bi bi-person-circle"></i>
+                        Conta
+                    </li>
+                </a>
+            </ul>
+        </nav>
 
         <section id="header-banner">
             <div id="header-banner-img-grande">
-                <img src="img/loja-interior-001.jpeg" alt="">
+                <img src="./img/loja-interior-001.jpeg" alt="">
                 <div class="header-banner-img-texto">
                     <h1>Agora estamos com loja física!</h1>
                     <p>Convidamos você para um café por cortesia da loja, venha nos conhecer!
@@ -26,13 +54,13 @@
 
             <div id="header-banner-lista-img-pequena">
                 <div class="header-banner-img-pequena">
-                    <img src="img/modelo-001.jpeg" alt="">
+                    <img src="./img/modelo-001.jpeg" alt="">
                     <div class="header-banner-img-texto">
                         <p>Estilo casual pro dia a dia!</p>
                     </div>
                 </div>
                 <div class="header-banner-img-pequena">
-                    <img src="img/modelo-002.jpeg" alt="">
+                    <img src="./img/modelo-002.jpeg" alt="">
                     <div class="header-banner-img-texto">
                         <p>Estilo mais hardcore para você que é mais underground</p>
                     </div>
@@ -50,48 +78,50 @@
         <section id="categorias-destaque">
             <div id="categorias-destaque-titulo">
                 <div class="flex-1 categorias-destaque-linha"></div>
-                <div id="categorias-destaque-texto"><p>#categorias, #populares</p></div>
+                <div id="categorias-destaque-texto">
+                    <p>#categorias, #populares</p>
+                </div>
                 <div class="flex-1 categorias-destaque-linha"></div>
             </div>
 
             <div id="categorias-destaque-lista">
 
                 <div class="categorias-destaque-categoria">
-                    <img src="img/categoria-mulher.jpeg" alt="">
+                    <img src="./img/categoria-mulher.jpeg" alt="">
                     <div class="categorias-destaque-categoria-texto">
                         <p>Roupa feminina</p>
                     </div>
                 </div>
 
                 <div class="categorias-destaque-categoria">
-                    <img src="img/categoria-homem.jpeg" alt="">
+                    <img src="./img/categoria-homem.jpeg" alt="">
                     <div class="categorias-destaque-categoria-texto">
                         <p>Roupa masculina</p>
                     </div>
                 </div>
 
                 <div class="categorias-destaque-categoria">
-                    <img src="img/categoria-sapatos.jpeg" alt="">
+                    <img src="./img/categoria-sapatos.jpeg" alt="">
                     <div class="categorias-destaque-categoria-texto">
                         <p>Sapatos</p>
                     </div>
                 </div>
 
                 <div class="categorias-destaque-categoria">
-                    <img src="img/categoria-oculos.jpeg" alt="">
+                    <img src="./img/categoria-oculos.jpeg" alt="">
                     <div class="categorias-destaque-categoria-texto">
                         <p>Óculos</p>
                     </div>
                 </div>
 
                 <div class="categorias-destaque-categoria">
-                    <img src="img/categoria-acessorios.jpeg" alt="">
+                    <img src="./img/categoria-acessorios.jpeg" alt="">
                     <div class="categorias-destaque-categoria-texto">
                         <p>Acessórios</p>
                     </div>
                 </div>
 
-                
+
             </div>
 
             <div class="categorias-destaque-linha"></div>
@@ -99,7 +129,7 @@
 
         <!-- PRODUTOS -->
         <section id="lista-produtos"></section>
-        
+
 
     </main>
 
@@ -119,18 +149,19 @@
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+    </script>
 
     <!-- VLIBRAS -->
 
-    <script src="js/Estrutura.js"></script>
-    <script src="js/Produtos.js"></script>
+    <script src="./js/Estrutura.js"></script>
+    <script src="./js/Produtos.js"></script>
 
 </body>
+
 </html>

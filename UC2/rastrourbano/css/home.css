@@ -45,7 +45,9 @@
         object-position: top center;
     }
 
-    #header-banner img:hover {
+    #header-banner-img-grande:hover,
+    .header-banner-img-pequena:hover {
+        cursor: pointer;
         filter: saturate(0);
     }
 

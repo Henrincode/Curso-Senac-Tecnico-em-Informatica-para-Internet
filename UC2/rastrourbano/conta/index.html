@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/conta.css">
+    <link rel="stylesheet" href="../css/conta.css">
     <title>Rastro Urbano - Conta de usuário</title>
 </head>
+
 <body>
-    
+
     <header>
-        <nav id="barra-navegacao"></nav>
+        <nav id="barra-navegacao">
+            <div class="logo">Rastro Urbano</div>
+            <input class="busca" type="text" placeholder="🔍 Buscar...">
+            <ul>
+                <a href="/">
+                    <li>
+                        <i class="bi bi-house"></i>
+                        Home
+                    </li>
+
+                </a>
+                <li>
+                    <i class="bi bi-gem"></i>
+                    Produtos
+                </li>
+                <li>
+                    <i class="bi bi-basket"></i>
+                    Carrinho
+                </li>
+                <a href="./conta">
+                    <li>
+                        <i class="bi bi-person-circle"></i>
+                        Conta
+                    </li>
+                </a>
+            </ul>
+        </nav>
 
         <section id="cabecalho">
             <div class="texto">
@@ -44,7 +72,7 @@
                                 <input type="text" value="Silva">
                             </div>
                         </div>
-    
+
                     </div>
 
                     <div class="formulario-linha">
@@ -75,7 +103,7 @@
                                 <input type="text" value="Americana">
                             </div>
                         </div>
-    
+
                     </div>
 
                     <div class="formulario-linha">
@@ -97,7 +125,7 @@
                                 <input type="text" value="2000">
                             </div>
                         </div>
-    
+
                     </div>
 
                     <div class="formulario-linha">
@@ -128,15 +156,15 @@
                                 <input type="text" value="Apartamento X Bloco X">
                             </div>
                         </div>
-    
+
                     </div>
 
                     <div class="formulario-linha">
 
                         <input id="form-botao" type="button" value="Atualizar dados cadastrais">
-    
+
                     </div>
-    
+
 
                 </div>
 
@@ -145,7 +173,7 @@
                 </div>
             </div>
         </div>
-        
+
     </main>
 
     <footer>
@@ -155,20 +183,21 @@
     </footer>
 
 
-        <!-- VLIBRAS -->
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-              <div class="vw-plugin-top-wrapper"></div>
-            </div>
-          </div>
-          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-          <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-          </script>
-    
-        <!-- VLIBRAS -->
+    <!-- VLIBRAS -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
-    <script src="/js/Estrutura.js"></script>
+    <!-- VLIBRAS -->
+
+    <script src="../js/Estrutura.js"></script>
 </body>
+
 </html>
