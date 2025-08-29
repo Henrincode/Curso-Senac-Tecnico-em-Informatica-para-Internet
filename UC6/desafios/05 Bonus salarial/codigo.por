@@ -14,9 +14,6 @@ programa {
 
     real salario, anos, bonus
 
-    // 20% para mais de 5 anos
-    // 10% para os demais
-
     escreva("Informe o salário atuao do funcionário\n")
     leia(salario)
 

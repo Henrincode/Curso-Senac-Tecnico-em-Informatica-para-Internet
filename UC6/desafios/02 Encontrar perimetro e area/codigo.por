@@ -4,8 +4,8 @@
 */
 
 /*
-Perímetro = 2 * PI * raio
-Área = PI * raio^2
+  Perímetro = 2 * PI * raio
+  Área = PI * raio^2
 */
 
 programa {
@@ -16,7 +16,6 @@ programa {
   const real PI = m.PI
 
   funcao inicio() {
-    caracter repetir
     real raio, perimetro, area
 
     escreva("Informe o raio para saber perímetro e área\n")
@@ -26,9 +25,9 @@ programa {
     area = m.arredondar(PI * m.potencia(raio, 2), 2)
 
     limpa()
-    escreva("Você informou um raio de " + raio + " portanto:\n")
-    escreva("Perímetro: " + perimetro + "\n")
-    escreva("Área: " + area + "\n")
+    escreva("Você informou um raio de ", raio, " portanto:\n")
+    escreva("Perímetro: ", perimetro, "\n")
+    escreva("Área: ", area, "\n")
 
     reiniciar()
   }

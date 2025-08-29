@@ -16,10 +16,10 @@ programa {
     escreva("Informe o valor em Fahrenheit para converter para Celsius\n")
     leia(fah)
 
-    celsius = m.arredondar((( ( fah - 32 ) * 5 ) / 9), 2)
+    celsius = m.arredondar(((( fah - 32 ) * 5 ) / 9), 2)
 
     limpa()
-    escreva("O valor de " + fah + "°F em Celsius é: " + celsius + "°C.\n")
+    escreva("O valor de ", fah, "°F em Celsius é: ", celsius, "°C.\n")
     
     reiniciar()
   }

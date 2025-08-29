@@ -6,6 +6,7 @@
 
 programa {
 
+  inclua biblioteca Matematica --> m
   inclua biblioteca Texto --> t
 
   funcao inicio() {
@@ -23,14 +24,14 @@ programa {
     escreva("Informe seu salário:\n")
     leia(salario)
 
-    se ((salario * 0.3) <= (emprestimo / parcelas)) {
-      limpa()
-      escreva("O valor das parcelas são de R$", emprestimo / parcelas, "\n")
-      escreva("O valor máximo para aprovação é de R$", salario * 0.3, "\n")
-    } senao {
+    se ((salario * 0.3) >= (emprestimo / parcelas)) {
       limpa()
       escreva("Parabéns, seu empréstimo foi aprovado!\n")
-      escreva("Valor das parcelas: R$", emprestimo / parcelas, "\n")
+      escreva("Valor das parcelas: R$", m.arredondar(emprestimo / parcelas, 2), "\n")
+    } senao {
+      limpa()
+      escreva("Negado! O valor das parcelas são de R$", m.arredondar(emprestimo / parcelas, 2), "\n")
+      escreva("O valor máximo das parcelas para aprovação devem ser de R$", m.arredondar(salario * 0.3, 2), "\n")
     }
 
     reiniciar()

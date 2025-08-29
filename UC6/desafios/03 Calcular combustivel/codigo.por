@@ -19,13 +19,13 @@ programa {
     escreva("Quanto de dinheiro você tem para abastecer?\n")
     leia(dinheiro)
 
-    dinheiro   = m.arredondar(dinheiro, 2)
+    dinheiro = m.arredondar(dinheiro, 2)
     abastecido = m.arredondar(dinheiro / PRECO, 2)
-    distancia  = m.arredondar(abastecido * AUTONOMIA, 2)
+    distancia = m.arredondar(abastecido * AUTONOMIA, 2)
     
     limpa()
-    escreva("Com o combustível à R$" + PRECO + " e abastecendo R$" + dinheiro + ", você compra "
-    + abastecido + " litros \ne tem uma autonomia de " + distancia + "km com o novo carro!\n")
+    escreva("Com o combustível à R$", PRECO, " e abastecendo R$", dinheiro, ", você compra ",
+    abastecido, " litros \ne tem uma autonomia de ", distancia, "km com o novo carro!\n")
 
     reiniciar()
   }

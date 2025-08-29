@@ -30,7 +30,7 @@ programa {
     total = m.arredondar(quantidade * PRECO, 2)
 
     limpa()
-    escreva("O cliente deverá pagar R$", total, " em ", quantidade, " produtos.\n")
+    escreva("O cliente deverá pagar R$", total, " em ", quantidade, " produto/s.\n")
 
     reiniciar()
   }

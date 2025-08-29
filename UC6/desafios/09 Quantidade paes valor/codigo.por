@@ -23,7 +23,7 @@ programa {
 
     inteiro quantidade, total
 
-    escreva("Informe a quantidade total dos produtos:\n")
+    escreva("Informe a quantidade total de pão/es:\n")
     leia(quantidade)
 
     total = m.arredondar(quantidade * PRECO, 2)

@@ -23,6 +23,7 @@ programa {
     leia(numero)
 
     escolha(numero) {  
+      
       caso 1:  
         limpa()
         escreva("Alimento não-perecível\n") 
