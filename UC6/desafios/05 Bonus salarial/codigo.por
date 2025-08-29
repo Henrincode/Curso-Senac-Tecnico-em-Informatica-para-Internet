@@ -1,13 +1,14 @@
 /*
-A empresa XKW concedeu um bônus de 20% do valor do salário a todos os funcionários com
-tempo de trabalho na empresa igual ou superior a 5 anos e de 10% aos demais. Faça um
-programa que receba o salário e o tempo de serviço de um funcionário, calcule e mostre o
-valor do bônus recebido por ele.
+  5. A empresa XKW concedeu um bônus de 20% do valor do salário a todos os funcionários com
+  tempo de trabalho na empresa igual ou superior a 5 anos e de 10% aos demais. Faça um
+  programa que receba o salário e o tempo de serviço de um funcionário, calcule e mostre o
+  valor do bônus recebido por ele.
 */
 
 programa {
 
-  inclua biblioteca Matematica --> mat
+  inclua biblioteca Matematica --> m
+  inclua biblioteca Texto --> t
 
   funcao inicio() {
 
@@ -24,7 +25,7 @@ programa {
     leia(anos)
 
     se (anos >= 5) {
-      bonus = mat.arredondar(salario * 0.2, 2)
+      bonus = m.arredondar(salario * 0.2, 2)
       salario += bonus
 
       limpa()
@@ -33,7 +34,7 @@ programa {
       escreva("Novo salário com bônus: R$", salario, "\n")
 
     } senao {
-      bonus = mat.arredondar(salario * 0.1, 2)
+      bonus = m.arredondar(salario * 0.1, 2)
       salario += bonus
 
       escreva("Como o funcionário tem menos de 5 anos ele recebe um bônus de 10%\n")
@@ -51,7 +52,7 @@ programa {
     escreva("\nFazer novo calculo, s/n? \n")
     leia(repetir)
 
-    se(repetir == 's') {
+    se(t.caixa_baixa(repetir) == 's') {
       limpa()
       inicio()
     }

@@ -18,7 +18,8 @@ calcule os descontos e o salário líquido, conforme a tabela abaixo:
 
 programa {
 
-  inclua biblioteca Matematica --> mat
+  inclua biblioteca Matematica --> m
+  inclua biblioteca Texto --> t
 
   const inteiro IR = 11, INSS = 8, SINDICATO = 5, TOTAL = IR + INSS + SINDICATO
 
@@ -28,9 +29,9 @@ programa {
     escreva("Informe seu salário bruto para calcular os inpostos\n")
     leia(bruto)
 
-    nIR = mat.arredondar(bruto * (IR / 100), 2)
-    nINSS = mat.arredondar(bruto * (INSS / 100), 2)
-    nSindicato = mat.arredondar(bruto * (SINDICATO / 100), 2)
+    nIR = m.arredondar(bruto * (IR / 100), 2)
+    nINSS = m.arredondar(bruto * (INSS / 100), 2)
+    nSindicato = m.arredondar(bruto * (SINDICATO / 100), 2)
 
     somaImpostos = nIR + nINSS + nSindicato
     liquido = bruto - nIR - nINSS - nSindicato
@@ -62,7 +63,7 @@ programa {
     escreva("\nFazer novo calculo, s/n? \n")
     leia(repetir)
 
-    se(repetir == 's') {
+    se(t.caixa_baixa(repetir) == 's') {
       limpa()
       inicio()
     }

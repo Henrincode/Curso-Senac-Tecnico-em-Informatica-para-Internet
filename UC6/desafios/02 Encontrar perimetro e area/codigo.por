@@ -10,9 +10,10 @@ Perímetro = 2 * PI * raio
 
 programa {
 
-  inclua biblioteca Matematica --> mat
+  inclua biblioteca Matematica --> m
+  inclua biblioteca Texto --> t
   
-  const real PI = mat.PI
+  const real PI = m.PI
 
   funcao inicio() {
     caracter repetir
@@ -21,8 +22,8 @@ programa {
     escreva("Informe o raio para saber perímetro e área\n")
     leia(raio)
 
-    perimetro = mat.arredondar(2 * PI * raio, 2)
-    area = mat.arredondar(PI * mat.potencia(raio, 2), 2)
+    perimetro = m.arredondar(2 * PI * raio, 2)
+    area = m.arredondar(PI * m.potencia(raio, 2), 2)
 
     limpa()
     escreva("Você informou um raio de " + raio + " portanto:\n")
@@ -39,7 +40,7 @@ programa {
     escreva("\nGostaria de fazer outro cálculo, s/n? \n")
     leia(repetir)
 
-    se(repetir == 's') {
+    se(t.caixa_baixa(repetir) == 's') {
       limpa()
       inicio()
     }

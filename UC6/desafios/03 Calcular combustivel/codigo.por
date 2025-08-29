@@ -7,7 +7,8 @@
 
 programa {
 
-  inclua biblioteca Matematica --> mat
+  inclua biblioteca Matematica --> m
+  inclua biblioteca Texto --> t
   
   const real AUTONOMIA = 20, PRECO = 5
 
@@ -18,9 +19,9 @@ programa {
     escreva("Quanto de dinheiro você tem para abastecer?\n")
     leia(dinheiro)
 
-    dinheiro   = mat.arredondar(dinheiro, 2)
-    abastecido = mat.arredondar(dinheiro / PRECO, 2)
-    distancia  = mat.arredondar(abastecido * AUTONOMIA, 2)
+    dinheiro   = m.arredondar(dinheiro, 2)
+    abastecido = m.arredondar(dinheiro / PRECO, 2)
+    distancia  = m.arredondar(abastecido * AUTONOMIA, 2)
     
     limpa()
     escreva("Com o combustível à R$" + PRECO + " e abastecendo R$" + dinheiro + ", você compra "
@@ -36,7 +37,7 @@ programa {
     escreva("\nFazer novo calculo, s/n? \n")
     leia(repetir)
 
-    se(repetir == 's') {
+    se(t.caixa_baixa(repetir) == 's') {
       limpa()
       inicio()
     }
