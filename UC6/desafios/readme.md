@@ -1,6 +1,6 @@
 # 9 Desafios de Algoritmos
 
-### **Nome:** Henrique AR Marques <br /> **Curso:** Técnico em Informática para Internet <br /> **Instituição:** SENAC Americana - SP <br /> **Data:** 30/08/2025
+### **Nome:** Henrique AR Marques <br /> **Curso:** Técnico em Informática para Internet <br /> **Instituição:** SENAC Americana - SP <br /> **Data:** 30/08/2025 <br /> **UC:** 06
 
 Nessas páginas você encontrará as soluções de 9 desafios que o professor me propôs: primeiro desenhei os fluxogramas no Figma para planejar a lógica e, em seguida, converti cada solução para Portugol. A proposta é mostrar como penso e resolvo problemas — do esboço visual à implementação — com um layout pronto para GitHub e para impressão.
 
@@ -8,9 +8,9 @@ Nessas páginas você encontrará as soluções de 9 desafios que o professor me
 
 Faça um programa que leia do usuário uma temperatura em Fahrenheit, converta-a para graus Celsius e escreva o novo valor na tela. A fórmula de conversão de Fahrenheit (F) para Celsius é C = ( ( F - 32 ) * 5 ) / 9. Exemplo: 100 Fahrenheit = 37,77 Celsius.
 
-- ### Fluxograma:
-
 ---
+
+- ### Fluxograma:
 
 ![alt text](<01 Fahrenheit para celsius/fluxograma.png>)
 
@@ -62,9 +62,9 @@ programa {
 
 Escreva um programa que pede o raio de um círculo, e em seguida exiba o perímetro e área do círculo. Para saber o valor do pi, use a biblioteca Matematica e função Matematica.PI
 
-- ### Fluxograma
-
 ---
+
+- ### Fluxograma
 
 ![alt text](<02 Encontrar perimetro e area/fluxograma.png>)
 
@@ -124,15 +124,11 @@ Um novo modelo de carro, super econômico foi lançado. Ele faz 20 km com 1 litr
 
 - ### Fluxograma:
 
----
-
 ![alt text](<03 Calcular combustivel/fluxograma.png>)
 
 ---
 
 - ### Código:
-
----
 
 ```javascript
 programa {
@@ -199,15 +195,11 @@ Faça um Programa que pergunte quanto você ganha por hora e o número de horas 
 
 - ### Fluxograma:
 
----
-
 ![alt text](<04 Imposto salario/fluxograma.png>)
 
 ---
 
 - ### Código:
-
----
 
 ```javascript
 programa {
@@ -273,15 +265,11 @@ A empresa XKW concedeu um bônus de 20% do valor do salário a todos os funcion�
 
 - ### Fluxograma:
 
----
-
 ![alt text](<05 Bonus salarial/fluxograma.png>)
 
 ---
 
 - ### Código:
-
----
 
 ```javascript
 programa {
@@ -347,15 +335,11 @@ Implemente um código para aprovar empréstimo bancário. O código deve pedir 3
 
 - ### Fluxograma:
 
----
-
 ![alt text](<06 Emprestimo/fluxograma.png>)
 
 ---
 
 - ### Código:
-
----
 
 ```javascript
 programa {
@@ -426,15 +410,11 @@ Código Classificação
 
 - ### Fluxograma:
 
----
-
 ![alt text](<07 Classificacao/fluxograma.png>)
 
 ---
 
 - ### Código:
-
----
 
 ```javascript
 programa {
@@ -516,15 +496,11 @@ Lojas Quase Dois - Tabela de preços:
 
 - ### Fluxograma:
 
----
-
 ![alt text](<08 Quantidade itens valor/fluxograma.png>)
 
 ---
 
 - ### Código:
-
----
 
 ```javascript
 programa {
@@ -585,15 +561,11 @@ Panificadora Pão de Ontem - Tabela de preços:
 
 - ### Fluxograma:
 
----
-
 ![alt text](<09 Quantidade paes valor/fluxograma.png>)
 
 ---
 
 - ### Código:
-
----
 
 ```javascript
 programa {
