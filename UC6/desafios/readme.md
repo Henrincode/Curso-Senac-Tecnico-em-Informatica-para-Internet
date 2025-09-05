@@ -504,40 +504,22 @@ Lojas Quase Dois - Tabela de preços:
 
 ```javascript
 programa {
-
-  inclua biblioteca Matematica --> m
-  inclua biblioteca Texto --> t
   
-
   real PRECO = 1.99
 
   funcao inicio() {
 
-    inteiro quantidade, total
+    escreva("====================\n")
+    escreva("TABELA DE PREÇOS\n")
+    escreva("====================\n")
 
-    escreva("Informe a quantidade total dos produtos:\n")
-    leia(quantidade)
-
-    total = m.arredondar(quantidade * PRECO, 2)
-
-    limpa()
-    escreva("O cliente deverá pagar R$", total, " em ", quantidade, " produto/s.\n")
-
-    reiniciar()
-  }
-
-  // Reiniciar o programa ou fechar
-  funcao reiniciar() {
-    caracter repetir
-
-    escreva("\nFazer novo calculo, s/n? \n")
-    leia(repetir)
-
-    se(t.caixa_baixa(repetir) == 's') {
-      limpa()
-      inicio()
+    para(inteiro i = 1; i <= 50; i++){
+      se(i < 10) {
+        escreva("0", i, " - R$", PRECO * i, "\n")
+      } senao {
+        escreva(i, " - R$", PRECO * i, "\n")
+      }
     }
-    limpa()
   }
 }
 ```
@@ -571,37 +553,22 @@ Panificadora Pão de Ontem - Tabela de preços:
 programa {
 
   inclua biblioteca Matematica --> m
-  inclua biblioteca Texto --> t
-
+  
   real PRECO = 0.18
 
   funcao inicio() {
 
-    inteiro quantidade, total
+    escreva("====================\n")
+    escreva("TABELA DE PREÇOS\n")
+    escreva("====================\n")
 
-    escreva("Informe a quantidade total de pão/es:\n")
-    leia(quantidade)
-
-    total = m.arredondar(quantidade * PRECO, 2)
-
-    limpa()
-    escreva("O cliente deverá pagar R$", total, " em ", quantidade, " pão/es.\n")
-
-    reiniciar()
-  }
-
-  // Reiniciar o programa ou fechar
-  funcao reiniciar() {
-    caracter repetir
-
-    escreva("\nFazer novo calculo, s/n? \n")
-    leia(repetir)
-
-    se(t.caixa_baixa(repetir) == 's') {
-      limpa()
-      inicio()
+    para(inteiro i = 1; i <= 50; i++){
+      se(i < 10) {
+        escreva("0", i, " - R$", m.arredondar(PRECO * i, 2), "\n")
+      } senao {
+        escreva(i, " - R$", m.arredondar(PRECO * i, 2), "\n")
+      }
     }
-    limpa()
   }
 }
 ```
