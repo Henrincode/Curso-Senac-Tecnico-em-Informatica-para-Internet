@@ -14,10 +14,10 @@ Vamos realizar uma atividade prática com a turma, onde nós três facilitamos. 
 
 ---
 
-### 1. Apresentação da Atividade (Pessoa 1)
+### 1. Apresentação da Atividade (Henrique)
 
 “Olá, pessoal!
-Somos o Grupo 1: Pessoa 1, Pessoa 2 e Pessoa 3.
+Somos o Grupo 1: Henrique, Murilo e Roberto.
 
 Hoje vamos falar sobre **Lifelong Learning**, ou seja, o aprendizado ao longo da vida — um conceito super importante para quem está na área de tecnologia, como vocês que estudam Técnico em Informática para Internet.
 
@@ -25,7 +25,7 @@ Na tecnologia, tudo muda rápido: novas linguagens, ferramentas, frameworks, dis
 
 Para entender melhor isso, vamos fazer uma atividade juntos.
 
-O Pessoa 2 vai desenhar no quadro uma linha do tempo, que vai do nascimento de cada um até o futuro — pensando na trajetória de aprendizado de vocês.
+O Murilo vai desenhar no quadro uma linha do tempo, que vai do nascimento de cada um até o futuro — pensando na trajetória de aprendizado de vocês.
 
 Cada um vai receber três post-its coloridos para escrever três aprendizados importantes:
 
@@ -45,9 +45,9 @@ Vamos começar?”
 
 **“A Linha do Tempo do Aprendizado da Turma”**
 
-* Pessoa 2 desenha a linha no quadro: **nascimento → hoje → futuro**.
-* Pessoa 1 lembra que cada um deve escrever os 3 aprendizados nos post-its.
-* Pessoa 3 distribui os post-its coloridos para todos.
+* Murilo desenha a linha no quadro: **nascimento → hoje → futuro**.
+* Henrique lembra que cada um deve escrever os 3 aprendizados nos post-its.
+* Roberto distribui os post-its coloridos para todos.
 * Todos colam seus post-its na linha do tempo.
 * Os facilitadores comentam os padrões e conexões que aparecem, destacando a diversidade de aprendizados e a importância de continuar evoluindo, principalmente na área de informática.
 
@@ -61,7 +61,7 @@ Vamos começar?”
 
 ---
 
-### 3. Fechamento (3 min) — Pessoa 3
+### 3. Fechamento (3 min) — Roberto
 
 “Viram só? Vocês acabaram de vivenciar o conceito de **lifelong learning** na prática!
 Na área de informática para internet, o aprendizado não pode parar, porque as tecnologias estão sempre evoluindo.
@@ -76,9 +76,9 @@ Esse é o verdadeiro sentido do aprendizado ao longo da vida — especialmente n
 
 ### Divisão Super Clara:
 
-* **Pessoa 1:** Apresenta o grupo e explica a atividade, conectando ao curso.
-* **Pessoa 2:** Desenha a linha do tempo e organiza os post-its no quadro.
-* **Pessoa 3:** Distribui o material e faz o fechamento relacionando lifelong learning com a área de informática para internet.
+* **Henrique:** Apresenta o grupo e explica a atividade, conectando ao curso.
+* **Murilo:** Desenha a linha do tempo e organiza os post-its no quadro.
+* **Roberto:** Distribui o material e faz o fechamento relacionando lifelong learning com a área de informática para internet.
 
 ---
 
@@ -102,6 +102,6 @@ Esse é o verdadeiro sentido do aprendizado ao longo da vida — especialmente n
 
 ### Se Sobrar Tempo:
 
-Pessoa 1 pode perguntar:
+Henrique pode perguntar:
 
 > “Alguém quer compartilhar uma descoberta ou um aprendizado novo que percebeu olhando a linha do tempo da turma? Como isso pode ajudar no curso ou na carreira em informática para internet?”
