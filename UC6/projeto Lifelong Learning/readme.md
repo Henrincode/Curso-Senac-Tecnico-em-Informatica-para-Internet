@@ -27,6 +27,51 @@ Para entender melhor isso, vamos fazer uma atividade juntos.
 
 O Murilo vai desenhar no quadro uma linha do tempo, que vai do nascimento de cada um até o futuro — pensando na trajetória de aprendizado de vocês.
 
+***
+
+## 1.1 Curiosiedades (Murilo)
+
+### 🏫 Aprendizagem Formal
+
+* **O que é:** Ocorre em instituições educacionais reconhecidas, como escolas, universidades e cursos técnicos.
+* **Características:**
+  • Estrutura organizada e sistemática.
+  • Currículos definidos, com objetivos claros.
+  • Avaliações e certificações oficiais.
+* **Exemplos:** Ensino fundamental, médio, graduação, pós-graduação, cursos profissionalizantes.
+
+---
+
+### 📚 Aprendizagem Não Formal
+
+* **O que é:** Acontece fora do sistema educacional tradicional, mas ainda possui uma certa organização e intencionalidade.
+* **Características:**
+  • Pode ter objetivos educacionais específicos.
+  • Não necessariamente leva a certificações formais.
+  • Flexível e adaptável às necessidades do indivíduo.
+* **Exemplos:** Workshops, cursos livres, treinamentos corporativos, palestras, atividades em ONGs.
+
+---
+
+### 🧠 Aprendizagem Informal
+
+* **O que é:** É espontânea, não estruturada e ocorre naturalmente no dia a dia.
+* **Características:**
+  • Não tem currículo ou avaliação.
+  • Surge de experiências, interações e curiosidade pessoal.
+  • Pode ser extremamente rica e significativa.
+* **Exemplos:** Aprender com colegas de trabalho, assistir vídeos educativos, ler por conta própria, aprender com erros e acertos, conversas com outras pessoas.
+
+---
+
+## 1.2 (Roberto)
+
+### 🌱 Lifelong Learning: Aprender Sempre
+
+O *lifelong learning* valoriza todos esses tipos de aprendizagem como partes essenciais de uma jornada contínua de desenvolvimento. Ele incentiva uma postura ativa, curiosa e aberta ao aprendizado em qualquer fase da vida — seja por necessidade profissional, realização pessoal ou simples curiosidade.
+
+***
+
 Cada um vai receber três post-its coloridos para escrever três aprendizados importantes:
 
 * Um aprendizado que tiveram na escola ou no curso (post-it azul).
