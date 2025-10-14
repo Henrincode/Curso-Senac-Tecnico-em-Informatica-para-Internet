@@ -20,8 +20,6 @@ Crie a coleção `produtos` no banco `loja`.
 | Cadeira  | 1200  | 5       |
 | Monitor  | 800   | 8       |
 
-#### Resposta 1, 2:
-
 `Consulta:`
 
 ```js
