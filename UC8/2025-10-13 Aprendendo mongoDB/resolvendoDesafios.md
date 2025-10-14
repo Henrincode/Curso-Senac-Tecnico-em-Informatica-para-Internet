@@ -599,7 +599,7 @@ Crie a coleção `fornecedores` no banco `loja`.
 use('loja')
 
 db.fornecedores.insertMany([
-    {nome: "TechDistribuidora", cidade: "São Paulo", tipo_de_produto: "Eletrônicos "},
+    {nome: "TechDistribuidora", cidade: "São Paulo", tipo_de_produto: "Eletrônicos"},
     {nome: "Moveis & Cia", cidade: "Curitiba", tipo_de_produto: "Móveis"},
     {nome: "Acessórios Ltda", cidade: "Rio de Janeiro", tipo_de_produto: "Eletrônicos"},
     {nome: "DecorPlus", cidade: "Belo Horizonte", tipo_de_produto: "Decoração"}
