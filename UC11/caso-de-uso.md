@@ -1,12 +1,12 @@
-# 🧩 **Caso de uso: Classificado de Condomínios (“CondoTrade”)**
+# **Caso de uso: Classificado de Condomínios (“CondoTrade”)**
 
-## 🎯 **Objetivo**
+### **Objetivo**
 
 Permitir que usuários busquem, anunciem e encontrem imóveis (condomínios, apartamentos, lotes ou unidades) em um portal especializado, com anúncios gratuitos e patrocinados.
 
 ---
 
-# 👥 **Atores**
+## **Atores**
 
 1. **Usuário visitante (não cadastrado)**
 
@@ -30,7 +30,7 @@ Permitir que usuários busquem, anunciem e encontrem imóveis (condomínios, apa
 
 ---
 
-# 🌐 **Fluxo principal (usuário visitante)**
+## **Fluxo principal (usuário visitante)**
 
 1. O visitante acessa a **página inicial** (`/`).
 2. Vê um **campo de busca principal** (ex: “Buscar condomínio por cidade, bairro ou nome”).
@@ -43,7 +43,7 @@ Permitir que usuários busquem, anunciem e encontrem imóveis (condomínios, apa
 
 ---
 
-# 🧾 **Fluxo (usuário cadastrado)**
+## **Fluxo (usuário cadastrado)**
 
 1. Usuário faz **login ou cria conta**.
 2. Acessa o **painel “Meus Anúncios”**.
@@ -62,7 +62,7 @@ Permitir que usuários busquem, anunciem e encontrem imóveis (condomínios, apa
 
 ---
 
-# 💰 **Monetização**
+## **Monetização**
 
 * **Anúncios patrocinados** aparecem:
 
@@ -77,7 +77,7 @@ Permitir que usuários busquem, anunciem e encontrem imóveis (condomínios, apa
 
 ---
 
-# 🧭 **Arquitetura de navegação (exemplo)**
+## **Arquitetura de navegação (exemplo)**
 
 ```
 /                -> Página inicial (busca)
@@ -93,7 +93,7 @@ Permitir que usuários busquem, anunciem e encontrem imóveis (condomínios, apa
 
 ---
 
-# 📊 **Possíveis extensões futuras**
+## **Possíveis extensões futuras**
 
 * Sistema de **mensagens internas** entre anunciante e interessado.
 * **Favoritar** anúncios.
