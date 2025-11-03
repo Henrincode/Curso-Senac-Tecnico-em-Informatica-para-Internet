@@ -1,6 +1,6 @@
 // config
 
-const nomeSite = "TradeMinio"
+const nomeSite = "condominiOZ"
 
 // seletores
 
