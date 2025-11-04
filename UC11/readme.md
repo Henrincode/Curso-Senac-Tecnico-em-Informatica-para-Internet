@@ -87,8 +87,8 @@ CREATE TABLE condominios (
     nome varchar(100) NOT NULL,
     numero int NOT NULL,
     rua varchar(100),
-    cidade int NOT NULL,
-    estado int NOT NULL,
+    cidade varchar(30) NOT NULL,
+    estado varchar(30) NOT NULL,
     PRIMARY KEY (id));
 ```
 
@@ -142,4 +142,94 @@ ALTER TABLE produtos
 ADD CONSTRAINT fk_prod_categoria
 FOREIGN KEY (categoria_id) REFERENCES categorias(id);
 
+```
+
+# Inserindo dados
+
+- Inserindo condomínio
+
+```sql
+INSERT INTO condominios (nome, numero, rua, cidade, estado) VALUES
+('Spazio Beach', 2000, 'Comendador Thomaz Fortunato', 'Americana', 'São Paulo')
+```
+
+- Inserindo usuário
+
+```sql
+INSERT INTO usuarios (nome, email, senha) VALUES
+('Henrique', 'henrique@mail.com', 'dasDASD@!@#'),
+('Ana Claudia', 'ana@mail.com', 'sadasd!@#Asdas'),
+('Arthur Marques', 'arthur@mail.com', 'sdadSAD@!312'),
+('Beatriz Souza', 'beatriz@mail.com', 'Bia123@!asd'),
+('Carlos Eduardo', 'carlos@mail.com', 'CarL0s@#123'),
+('Fernanda Lima', 'fernanda@mail.com', 'FerN@!789asd'),
+('João Pedro', 'joaopedro@mail.com', 'JpEDR0@#abc'),
+('Mariana Torres', 'mariana@mail.com', 'Mari@2024!A')
+```
+
+- Adicionando condomínio para usuário
+
+```sql
+INSERT INTO usuarios_condominios (usuario_id, condominio_id, bloco, apartamento) VALUES
+(1, 1, '6', '308'),
+(2, 1, '1', '102'),
+(3, 1, '2', '201'),
+(4, 1, '2', '202'),
+(5, 1, '3', '301'),
+(6, 1, '3', '302'),
+(7, 1, '4', '401'),
+(8, 1, '4', '402')
+```
+
+- Inserindo categoria
+
+```sql
+INSERT INTO categorias (nome) VALUES
+('Eletrônicos'),
+('Roupas'),
+('Calçados'),
+('Acessórios'),
+('Móveis'),
+('Decoração'),
+('Brinquedos'),
+('Livros')
+
+```
+
+- Inserindo produto
+
+```sql
+INSERT INTO produtos (usuario_id, categoria_id, titulo, descricao) VALUES
+(1, 1, 'Rádio de carro CD USB', 'Rádio de carro usado com entradas USB e leitor de CD'),
+(1, 1, 'Computador gamer', 'RTX 3060, I5, 16GB RAM, 1TB SSD'),
+(2, 2, 'Camisa social azul', 'Camisa social masculina tamanho M, pouco usada'),
+(2, 2, 'Jaqueta de couro', 'Jaqueta de couro preta, tamanho G, em ótimo estado'),
+(3, 3, 'Tênis esportivo Nike', 'Tênis de corrida confortável, número 42, usado poucas vezes'),
+(4, 4, 'Relógio de pulso', 'Relógio analógico com pulseira de couro marrom'),
+(5, 5, 'Sofá 3 lugares', 'Sofá de tecido cinza, confortável e bem conservado'),
+(6, 6, 'Luminária de mesa', 'Luminária branca de LED, ideal para escritório ou quarto'),
+(7, 7, 'Boneca Barbie', 'Boneca original Barbie com roupas e acessórios'),
+(8, 8, 'Livro “Dom Casmurro”', 'Edição de capa dura, excelente estado de conservação')
+```
+
+- Exibindo dados
+
+```sql
+SELECT
+    u.nome AS usuario,
+    c.nome AS condominio,
+    uc.bloco,
+    uc.apartamento,
+    cat.nome AS categoria,
+    p.titulo,
+    p.descricao
+FROM produtos p
+INNER JOIN usuarios u 
+    ON p.usuario_id = u.id
+INNER JOIN categorias cat 
+    ON p.categoria_id = cat.id
+INNER JOIN usuarios_condominios uc 
+    ON uc.usuario_id = u.id
+INNER JOIN condominios c 
+    ON uc.condominio_id = c.id
 ```
