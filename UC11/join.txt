@@ -1,0 +1,17 @@
+SELECT
+    u.nome AS usuario,
+    c.nome AS condominio,
+    uc.bloco,
+    uc.apartamento,
+    cat.nome AS categoria,
+    p.titulo,
+    p.descricao
+FROM produtos p
+INNER JOIN usuarios u 
+    ON p.usuario_id = u.id
+INNER JOIN categorias cat 
+    ON p.categoria_id = cat.id
+INNER JOIN usuarios_condominios uc 
+    ON uc.usuario_id = u.id
+INNER JOIN condominios c 
+    ON uc.condominio_id = c.id
