@@ -1,1 +1,63 @@
 .vscode
+
+# Dependências
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Diretórios de build
+dist/
+build/
+out/
+
+# Ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Cache
+.npm
+.yarn
+.pnpm
+.cache/
+.tmp/
+
+# Testes e cobertura
+coverage/
+.nyc_output/
+
+# Configurações temporárias
+*.pid
+*.seed
+*.pid.lock
+
+# Arquivos de lock alternativos (caso use apenas um gerenciador)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Caso use TypeScript
+*.tsbuildinfo
+
+# Caso use Next.js
+.next/
+
+# Caso use Remix, Svelte, Vite ou outros bundlers
+.vite/
+.svelte-kit/
+.remix/
