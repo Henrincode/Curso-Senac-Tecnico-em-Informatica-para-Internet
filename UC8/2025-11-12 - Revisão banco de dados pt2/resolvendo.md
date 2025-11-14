@@ -22,14 +22,16 @@ Resposta:
 - Consulta:
 
 ```sql
-select cu.nome_curso,
-count(*) as total_turmas_abertas,
-year(tu.data_fim)
-from tb_turmas tu
-inner join tb_cursos cu
-	on cu.id_curso = tu.id_curso_fk
-where tu.data_fim > CURDATE()
-group by cu.nome_curso
+select 
+    c.nome_curso,
+    sum(t.data_fim > current_date()) as total_turmas_abertas
+from tb_cursos c
+join tb_turmas t
+    on c.id_curso = t.id_curso_fk
+group by 
+    c.nome_curso
+having 
+    count(t.id_turma) > 5
 ```
 
 - Resposta:
@@ -94,9 +96,37 @@ order by total_alunos desc
 
 6.	Quais salas (nome da sala) têm uma média de capacidade usada (considerando apenas a capacidade da sala) que é inferior a 38?
 
+- Consulta:
 
+```sql
+select
+	sa.numero_sala as sala,
+	round(avg(t.total_alunos), 2) as media_usada
+from (
+	select
+		count(id_aluno_fk) as total_alunos,
+		id_turma_fk 
+	from tb_aluno_turma
+	group by id_turma_fk 
+) as t
+inner join tb_turmas tu
+	on tu.id_turma = t.id_turma_fk
+inner join tb_salas sa
+	on sa.id_sala = tu.id_sala_fk 
+group by sa.id_sala, sa.numero_sala 
+having avg(t.total_alunos) < 38
+```
+
+- Resposta:
+
+![alt text](image-5.png)
 
 7.	Liste o nome do curso e a carga horária máxima entre todos os cursos que possuem turmas abertas.
+
+- Consulta:
+
+
+
 8.	Quais são os cursos (sigla) que possuem exatamente 150 alunos matriculados no total?
 9.	Encontre o nome do aluno e quantas turmas diferentes ele está matriculado, listando apenas os alunos que estão matriculados em quatro turmas ou mais.
 10.	Liste a especialidade do docente e a quantidade de docentes que possuem essa especialidade, exibindo apenas as especialidades que têm apenas um docente associado.
