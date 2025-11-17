@@ -533,4 +533,28 @@ group by al.id_aluno
 ![alt text](image-26.png)
 
 28.	Liste o nome do curso e o número de alunos que nasceram no mês de dezembro e estão matriculados em alguma turma desse curso.
+
+- Consulta:
+
+```sql
+select
+	cu.nome_curso,
+	count(al.id_aluno) as alunos_nascidos_dezembro
+from tb_cursos cu
+inner join tb_turmas tu
+	on tu.id_curso_fk = cu.id_curso 
+inner join tb_aluno_turma at 
+	on at.id_turma_fk = tu.id_turma 
+inner join tb_alunos al
+	on al.id_aluno = at.id_aluno_fk
+where month(al.data_nascimento) = 12
+group by cu.id_curso 
+order by cu.nome_curso 
+```
+
+- Resposta:
+
+![alt text](image-27.png)
+
 29.	Qual é o nome do curso que tem turmas alocadas na sala 'Sala Convencional' (nome_sala = 'Sala Convencional') e a carga horária média dessas turmas é igual a 1000 horas?
+
