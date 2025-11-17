@@ -452,6 +452,25 @@ order by tu.id_turma asc
 ![alt text](image-22.png)
 
 24.	Liste o nome da sala e a quantidade de turmas alocadas nela, mas apenas para salas do tipo 'LABORATORIO'.
+
+- Consulta:
+
+```sql
+select 
+	sa.nome_sala,
+	count(tu.id_turma ) as quantidade_turmas
+from tb_salas sa
+inner join tb_turmas tu
+	on tu.id_sala_fk = sa.id_sala 
+where sa.tipo = "LABORATORIO"
+group by sa.id_sala 
+order by sa.nome_sala asc
+```
+
+- Resposta:
+
+![alt text](image-23.png)
+
 25.	Quais são os docentes (nome) que estão qualificados para cursos cuja carga horária total somada seja superior a 2500 horas?
 26.	Liste a sigla da turma e a carga horária do curso correspondente, para todas as turmas do turno 'TARDE'.
 27.	Encontre o nome do aluno e a média da carga horária dos cursos em que ele está matriculado.
