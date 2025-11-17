@@ -512,7 +512,25 @@ order by tu.sigla_turma asc
 
 27.	Encontre o nome do aluno e a média da carga horária dos cursos em que ele está matriculado.
 
+- Consulta:
 
+```sql
+select 
+	al.nome,
+	round(avg(cu.carga_horaria), 2) as meida_carga_horaria
+from tb_alunos al
+inner join tb_aluno_turma at
+	on at.id_aluno_fk = al.id_aluno
+inner join tb_turmas tu
+	on tu.id_turma = at.id_turma_fk
+inner join tb_cursos cu
+	on cu.id_curso = tu.id_curso_fk 
+group by al.id_aluno 
+```
+
+- Resposta:
+
+![alt text](image-26.png)
 
 28.	Liste o nome do curso e o número de alunos que nasceram no mês de dezembro e estão matriculados em alguma turma desse curso.
 29.	Qual é o nome do curso que tem turmas alocadas na sala 'Sala Convencional' (nome_sala = 'Sala Convencional') e a carga horária média dessas turmas é igual a 1000 horas?
