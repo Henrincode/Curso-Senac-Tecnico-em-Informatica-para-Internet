@@ -332,8 +332,69 @@ order by do.nome
 ![alt text](image-16.png)
 
 18.	Liste o nome do curso e o número de turmas que iniciaram em '2024-02-01'.
+
+- Consulta:
+
+```sql
+select
+	cu.nome_curso,
+	count(tu.id_turma) as numero_turmas
+from tb_cursos cu
+inner join tb_turmas tu
+	on tu.id_curso_fk = cu.id_curso
+where tu.data_inicio = '2024-02-01'
+group by cu.id_curso
+order by cu.nome_curso
+```
+- Resposta:
+
+![alt text](image-17.png)
+
 19.	Quais são as turmas (sigla) que têm o nome do aluno matriculado começando com a letra 'A' (LIKE 'A%') e possuem mais de 3 alunos cujo nome se encaixa nesse critério?
+
+- Consulta:
+
+```sql
+select
+    tu.sigla_turma,
+    count(al.nome) as total_alunos
+from tb_turmas tu
+inner join tb_aluno_turma at
+    on at.id_turma_fk = tu.id_turma
+inner join tb_alunos al
+    on al.id_aluno = at.id_aluno_fk
+where al.nome like 'A%'
+group by tu.id_turma, tu.sigla_turma
+having count(al.nome) > 3
+order by tu.sigla_turma;
+```
+
+- Resposta:
+
+![alt text](image-18.png)
+
 20.	Liste o nome do aluno e quantos cursos diferentes ele está estudando atualmente (baseado nas turmas em que está matriculado).
+
+- Consulta:
+
+```sql
+select
+	al.nome,
+	count(ta.id_turma_fk) as numero_turmas
+from tb_alunos al
+inner join tb_aluno_turma ta
+	on ta.id_aluno_fk = al.id_aluno
+inner join tb_turmas tu
+	on tu.id_turma = ta.id_turma_fk 
+where tu.data_fim > current_date()
+group by al.id_aluno
+order by al.nome
+```
+
+- Resposta:
+
+![alt text](image-19.png)
+
 21.	Para cada tipo de sala (TEORICA ou LABORATORIO), mostre a capacidade total combinada (SUM(capacidade)).
 22.	Liste o nome do curso e quantos alunos no total estão matriculados em turmas pertencentes a esse curso, focando apenas nos cursos que têm mais de 80 alunos matriculados.
 23.	Encontre o ID da turma e a data de início para todas as turmas que possuem exatamente 15 matrículas.
