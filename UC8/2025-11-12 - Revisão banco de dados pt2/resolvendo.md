@@ -311,6 +311,26 @@ order by cu.nome_curso
 ![alt text](image-15.png)
 
 17.	Encontre o nome do docente e o nome do curso que ele é qualificado, mas apenas se o curso tiver uma carga_horaria de exatamente 800 horas.
+
+- Consulta:
+
+```sql
+select
+	do.nome,
+	cu.nome_curso
+from tb_docentes do
+inner join tb_docente_curso dc
+	on dc.id_docente_fk = do.id_docente
+inner join tb_cursos cu
+	on cu.id_curso = dc.id_curso_fk
+where cu.carga_horaria = 800
+order by do.nome 
+```
+
+- Resposta:
+
+![alt text](image-16.png)
+
 18.	Liste o nome do curso e o número de turmas que iniciaram em '2024-02-01'.
 19.	Quais são as turmas (sigla) que têm o nome do aluno matriculado começando com a letra 'A' (LIKE 'A%') e possuem mais de 3 alunos cujo nome se encaixa nesse critério?
 20.	Liste o nome do aluno e quantos cursos diferentes ele está estudando atualmente (baseado nas turmas em que está matriculado).
