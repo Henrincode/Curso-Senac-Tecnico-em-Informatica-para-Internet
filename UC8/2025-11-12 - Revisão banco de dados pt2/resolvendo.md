@@ -472,6 +472,26 @@ order by sa.nome_sala asc
 ![alt text](image-23.png)
 
 25.	Quais são os docentes (nome) que estão qualificados para cursos cuja carga horária total somada seja superior a 2500 horas?
+
+- Consulta:
+
+```sql
+select 
+	do.nome 
+from tb_docentes do
+inner join tb_docente_curso dc
+	on dc.id_docente_fk = do.id_docente 
+inner join tb_cursos cu
+	on cu.id_curso = dc.id_curso_fk 
+group by do.id_docente 
+having sum(cu.carga_horaria) > 2500
+order by do.nome 
+```
+
+- Resposta:
+
+![alt text](image-24.png)
+
 26.	Liste a sigla da turma e a carga horária do curso correspondente, para todas as turmas do turno 'TARDE'.
 27.	Encontre o nome do aluno e a média da carga horária dos cursos em que ele está matriculado.
 28.	Liste o nome do curso e o número de alunos que nasceram no mês de dezembro e estão matriculados em alguma turma desse curso.
