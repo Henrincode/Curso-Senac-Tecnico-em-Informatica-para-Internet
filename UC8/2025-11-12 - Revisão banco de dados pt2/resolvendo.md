@@ -396,8 +396,61 @@ order by al.nome
 ![alt text](image-19.png)
 
 21.	Para cada tipo de sala (TEORICA ou LABORATORIO), mostre a capacidade total combinada (SUM(capacidade)).
+
+- Consulta:
+
+```sql
+select tipo, sum(capacidade) as capacidade_total
+from tb_salas
+group by tipo;
+```
+
+- Resposta:
+
+![alt text](image-20.png)
+
 22.	Liste o nome do curso e quantos alunos no total estão matriculados em turmas pertencentes a esse curso, focando apenas nos cursos que têm mais de 80 alunos matriculados.
+
+- Consulta:
+
+```sql
+select
+	cu.nome_curso,
+	count(at.id_aluno_fk) as total_alunos
+from tb_cursos cu
+inner join tb_turmas tu
+	on tu.id_curso_fk = cu.id_curso
+inner join tb_aluno_turma at
+	on at.id_turma_fk = tu.id_turma
+group by cu.id_curso 
+having total_alunos > 80
+order by cu.nome_curso
+```
+
+- Resposta:
+
+![alt text](image-21.png)
+
 23.	Encontre o ID da turma e a data de início para todas as turmas que possuem exatamente 15 matrículas.
+
+- Consulta:
+
+```sql
+select
+	tu.id_turma,
+	tu.data_inicio 
+from tb_turmas tu
+inner join tb_aluno_turma at 
+	on at.id_turma_fk = tu.id_turma 
+group by tu.id_turma
+having count(at.id_aluno_fk) = 15
+order by tu.id_turma asc
+```
+
+- Resposta:
+
+![alt text](image-22.png)
+
 24.	Liste o nome da sala e a quantidade de turmas alocadas nela, mas apenas para salas do tipo 'LABORATORIO'.
 25.	Quais são os docentes (nome) que estão qualificados para cursos cuja carga horária total somada seja superior a 2500 horas?
 26.	Liste a sigla da turma e a carga horária do curso correspondente, para todas as turmas do turno 'TARDE'.
