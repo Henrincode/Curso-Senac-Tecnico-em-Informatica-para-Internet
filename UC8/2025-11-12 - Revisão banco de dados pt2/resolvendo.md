@@ -99,8 +99,7 @@ order by total_alunos desc
 
 ```sql
 select
-	sa.numero_sala as sala,
-	round(avg(at.total_alunos), 2) as media_usada
+	sa.nome_sala
 from (
 	select
 		count(id_aluno_fk) as total_alunos,
@@ -113,12 +112,36 @@ inner join tb_turmas as tu
 inner join tb_salas as sa
 	on sa.id_sala = tu.id_sala_fk 
 group by sa.id_sala, sa.numero_sala 
-having media_usada < 38
+having round(avg(at.total_alunos), 2) < 38
 ```
 
 - Resposta:
 
 ![alt text](image-5.png)
+
+- Se for para agrupar os nomes das salas:
+
+```sql
+select
+	sa.nome_sala
+from (
+	select
+		count(id_aluno_fk) as total_alunos,
+		id_turma_fk 
+	from tb_aluno_turma
+	group by id_turma_fk 
+) as at
+inner join tb_turmas as tu
+	on tu.id_turma = at.id_turma_fk
+inner join tb_salas as sa
+	on sa.id_sala = tu.id_sala_fk 
+group by sa.nome_sala 
+having round(avg(at.total_alunos), 2) < 38
+```
+
+- Resposta:
+
+![alt text](image-29.png)
 
 7.	Liste o nome do curso e a carga horária máxima entre todos os cursos que possuem turmas abertas.
 
