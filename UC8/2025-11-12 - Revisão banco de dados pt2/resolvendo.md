@@ -9,7 +9,7 @@ select
 	year(data_nascimento) as ano,
 	count(id_aluno) as total_de_alunos
 from tb_alunos
-group by year(data_nascimento)
+group by ano
 order by ano desc 
 ```
 
@@ -25,13 +25,12 @@ Resposta:
 select 
     c.nome_curso,
     sum(t.data_fim > current_date()) as total_turmas_abertas
-from tb_cursos c
-join tb_turmas t
+from tb_cursos as c
+inner join tb_turmas as t
     on c.id_curso = t.id_curso_fk
-group by 
-    c.nome_curso
-having 
-    count(t.id_turma) > 5
+group by c.id_curso
+having count(t.id_turma) > 5
+order by c.nome_curso 
 ```
 
 - Resposta:
@@ -46,8 +45,8 @@ having
 select
 	tu.turno,
 	round(avg(cu.carga_horaria), 2) as media_carga_horaria
-from tb_turmas tu
-inner join tb_cursos cu
+from tb_turmas as tu
+inner join tb_cursos as cu
 	on cu.id_curso = tu.id_curso_fk 
 group by tu.turno 
 ```
@@ -64,10 +63,10 @@ group by tu.turno
 select 
     do.nome,
     count(dc.id_curso_fk) as cursos_diferentes
-from tb_docente_curso dc
-inner join tb_docentes do
+from tb_docente_curso as dc
+inner join tb_docentes as do
     on do.id_docente = dc.id_docente_fk
-group by do.id_docente, do.nome
+group by do.id_docente
 having cursos_diferentes >= 3
 ```
 
@@ -83,8 +82,8 @@ having cursos_diferentes >= 3
 select
     tu.sigla_turma,
     count(at.id_aluno_fk) as total_alunos
-from tb_aluno_turma at
-inner join tb_turmas tu
+from tb_aluno_turma as at
+inner join tb_turmas as tu
 	on tu.id_turma = at.id_turma_fk 
 group by tu.sigla_turma
 order by total_alunos desc
@@ -101,17 +100,17 @@ order by total_alunos desc
 ```sql
 select
 	sa.numero_sala as sala,
-	round(avg(t.total_alunos), 2) as media_usada
+	round(avg(at.total_alunos), 2) as media_usada
 from (
 	select
 		count(id_aluno_fk) as total_alunos,
 		id_turma_fk 
 	from tb_aluno_turma
 	group by id_turma_fk 
-) as t
-inner join tb_turmas tu
-	on tu.id_turma = t.id_turma_fk
-inner join tb_salas sa
+) as at
+inner join tb_turmas as tu
+	on tu.id_turma = at.id_turma_fk
+inner join tb_salas as sa
 	on sa.id_sala = tu.id_sala_fk 
 group by sa.id_sala, sa.numero_sala 
 having media_usada < 38
@@ -130,7 +129,7 @@ select
 	cu.nome_curso,
 	cu.carga_horaria
 from tb_cursos as cu
-inner join tb_turmas tu
+inner join tb_turmas as tu
 	on tu.id_curso_fk = cu.id_curso 
 where tu.data_fim > CURRENT_DATE() or tu.data_fim is null
 order by cu.carga_horaria desc
@@ -149,10 +148,10 @@ limit 1
 select
 	cu.sigla,
 	count(at.id_aluno_fk) as total_alunos
-from tb_cursos cu
-inner join tb_turmas tu
+from tb_cursos as cu
+inner join tb_turmas as tu
 	on tu.id_curso_fk = cu.id_curso
-inner join tb_aluno_turma at
+inner join tb_aluno_turma as at
 	on at.id_turma_fk = tu.id_turma
 group by cu.id_curso
 having total_alunos = 150
@@ -170,8 +169,8 @@ having total_alunos = 150
 select
 	al.nome,
 	count(at.id_turma_fk) as numero_turmas
-from tb_alunos al
-inner join tb_aluno_turma at
+from tb_alunos as al
+inner join tb_aluno_turma as at
 	on at.id_aluno_fk = al.id_aluno
 group by al.id_aluno
 having numero_turmas >= 4
@@ -208,8 +207,8 @@ order by especialidade asc
 select
 	sa.nome_sala,
 	sa.tipo
-from tb_salas sa
-inner join tb_turmas tu
+from tb_salas as sa
+inner join tb_turmas as tu
 	on tu.id_sala_fk = sa.id_sala
 where turno = "MANHA"
 order by sa.capacidade desc
@@ -261,8 +260,8 @@ order by sigla
 select
 	sa.id_sala,
 	count(tu.id_turma ) as total_turmas
-from tb_salas sa
-inner join tb_turmas tu
+from tb_salas as sa
+inner join tb_turmas as tu
 	on tu.id_sala_fk = sa.id_sala
 group by sa.id_sala
 having total_turmas >= 5
@@ -298,8 +297,8 @@ limit 1
 select 
 	cu.nome_curso,
 	count(tu.id_turma) as quantidade_turmas
-from tb_cursos cu
-inner join tb_turmas tu
+from tb_cursos as cu
+inner join tb_turmas as tu
 	on tu.id_curso_fk = cu.id_curso
 where tu.turno = "TARDE"
 group by cu.id_curso
@@ -318,10 +317,10 @@ order by cu.nome_curso
 select
 	do.nome,
 	cu.nome_curso
-from tb_docentes do
-inner join tb_docente_curso dc
+from tb_docentes as do
+inner join tb_docente_curso as dc
 	on dc.id_docente_fk = do.id_docente
-inner join tb_cursos cu
+inner join tb_cursos as cu
 	on cu.id_curso = dc.id_curso_fk
 where cu.carga_horaria = 800
 order by do.nome 
@@ -339,8 +338,8 @@ order by do.nome
 select
 	cu.nome_curso,
 	count(tu.id_turma) as numero_turmas
-from tb_cursos cu
-inner join tb_turmas tu
+from tb_cursos as cu
+inner join tb_turmas as tu
 	on tu.id_curso_fk = cu.id_curso
 where tu.data_inicio = '2024-02-01'
 group by cu.id_curso
@@ -358,10 +357,10 @@ order by cu.nome_curso
 select
     tu.sigla_turma,
     count(al.nome) as total_alunos
-from tb_turmas tu
-inner join tb_aluno_turma at
+from tb_turmas as tu
+inner join tb_aluno_turma as at
     on at.id_turma_fk = tu.id_turma
-inner join tb_alunos al
+inner join tb_alunos as al
     on al.id_aluno = at.id_aluno_fk
 where al.nome like 'A%'
 group by tu.id_turma, tu.sigla_turma
@@ -381,10 +380,10 @@ order by tu.sigla_turma;
 select
 	al.nome,
 	count(ta.id_turma_fk) as numero_turmas
-from tb_alunos al
-inner join tb_aluno_turma ta
+from tb_alunos as al
+inner join tb_aluno_turma as ta
 	on ta.id_aluno_fk = al.id_aluno
-inner join tb_turmas tu
+inner join tb_turmas as tu
 	on tu.id_turma = ta.id_turma_fk 
 where tu.data_fim > current_date()
 group by al.id_aluno
@@ -417,8 +416,8 @@ group by tipo;
 select
 	cu.nome_curso,
 	count(at.id_aluno_fk) as total_alunos
-from tb_cursos cu
-inner join tb_turmas tu
+from tb_cursos as cu
+inner join tb_turmas as tu
 	on tu.id_curso_fk = cu.id_curso
 inner join tb_aluno_turma at
 	on at.id_turma_fk = tu.id_turma
@@ -439,8 +438,8 @@ order by cu.nome_curso
 select
 	tu.id_turma,
 	tu.data_inicio 
-from tb_turmas tu
-inner join tb_aluno_turma at 
+from tb_turmas as tu
+inner join tb_aluno_turma as at 
 	on at.id_turma_fk = tu.id_turma 
 group by tu.id_turma
 having count(at.id_aluno_fk) = 15
@@ -459,8 +458,8 @@ order by tu.id_turma asc
 select 
 	sa.nome_sala,
 	count(tu.id_turma ) as quantidade_turmas
-from tb_salas sa
-inner join tb_turmas tu
+from tb_salas as sa
+inner join tb_turmas as tu
 	on tu.id_sala_fk = sa.id_sala 
 where sa.tipo = "LABORATORIO"
 group by sa.id_sala 
@@ -478,10 +477,10 @@ order by sa.nome_sala asc
 ```sql
 select 
 	do.nome 
-from tb_docentes do
-inner join tb_docente_curso dc
+from tb_docentes as do
+inner join tb_docente_curso as dc
 	on dc.id_docente_fk = do.id_docente 
-inner join tb_cursos cu
+inner join tb_cursos as cu
 	on cu.id_curso = dc.id_curso_fk 
 group by do.id_docente 
 having sum(cu.carga_horaria) > 2500
@@ -499,8 +498,8 @@ order by do.nome
 ```sql
 select 
 	tu.sigla_turma, cu.carga_horaria 
-from tb_turmas tu
-inner join tb_cursos cu
+from tb_turmas as tu
+inner join tb_cursos as cu
 	on cu.id_curso = tu.id_curso_fk 
 where tu.turno = "TARDE"
 order by tu.sigla_turma asc
@@ -517,13 +516,13 @@ order by tu.sigla_turma asc
 ```sql
 select 
 	al.nome,
-	round(avg(cu.carga_horaria), 2) as meida_carga_horaria
-from tb_alunos al
-inner join tb_aluno_turma at
+	round(avg(cu.carga_horaria), 2) as media_carga_horaria
+from tb_alunos as al
+inner join tb_aluno_turma as at
 	on at.id_aluno_fk = al.id_aluno
-inner join tb_turmas tu
+inner join tb_turmas as tu
 	on tu.id_turma = at.id_turma_fk
-inner join tb_cursos cu
+inner join tb_cursos as cu
 	on cu.id_curso = tu.id_curso_fk 
 group by al.id_aluno 
 ```
@@ -540,12 +539,12 @@ group by al.id_aluno
 select
 	cu.nome_curso,
 	count(al.id_aluno) as alunos_nascidos_dezembro
-from tb_cursos cu
-inner join tb_turmas tu
+from tb_cursos as cu
+inner join tb_turmas as tu
 	on tu.id_curso_fk = cu.id_curso 
-inner join tb_aluno_turma at 
+inner join tb_aluno_turma as at 
 	on at.id_turma_fk = tu.id_turma 
-inner join tb_alunos al
+inner join tb_alunos as al
 	on al.id_aluno = at.id_aluno_fk
 where month(al.data_nascimento) = 12
 group by cu.id_curso 
@@ -558,3 +557,20 @@ order by cu.nome_curso
 
 29.	Qual é o nome do curso que tem turmas alocadas na sala 'Sala Convencional' (nome_sala = 'Sala Convencional') e a carga horária média dessas turmas é igual a 1000 horas?
 
+- Consulta:
+
+```sql
+select 
+	cu.nome_curso 
+from tb_cursos as cu
+inner join tb_turmas as tu
+	on tu.id_curso_fk = cu.id_curso 
+inner join tb_salas as sa
+	on sa.id_sala  = tu.id_sala_fk 
+where sa.nome_sala = "Sala Convencional" and cu.carga_horaria = 1000
+group by cu.id_curso 
+```
+
+- Resposta:
+
+![alt text](image-28.png)
