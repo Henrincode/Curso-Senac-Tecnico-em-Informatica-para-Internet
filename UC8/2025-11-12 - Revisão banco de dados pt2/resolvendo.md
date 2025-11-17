@@ -493,6 +493,26 @@ order by do.nome
 ![alt text](image-24.png)
 
 26.	Liste a sigla da turma e a carga horária do curso correspondente, para todas as turmas do turno 'TARDE'.
+
+- Consulta:
+
+```sql
+select 
+	tu.sigla_turma, cu.carga_horaria 
+from tb_turmas tu
+inner join tb_cursos cu
+	on cu.id_curso = tu.id_curso_fk 
+where tu.turno = "TARDE"
+order by tu.sigla_turma asc
+```
+
+- Resposta:
+
+![alt text](image-25.png)
+
 27.	Encontre o nome do aluno e a média da carga horária dos cursos em que ele está matriculado.
+
+
+
 28.	Liste o nome do curso e o número de alunos que nasceram no mês de dezembro e estão matriculados em alguma turma desse curso.
 29.	Qual é o nome do curso que tem turmas alocadas na sala 'Sala Convencional' (nome_sala = 'Sala Convencional') e a carga horária média dessas turmas é igual a 1000 horas?
