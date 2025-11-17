@@ -6,10 +6,10 @@
 
 ```sql
 select
-	YEAR(data_nascimento) as ano,
-	COUNT(*) as total_de_alunos
+	year(data_nascimento) as ano,
+	count(id_aluno) as total_de_alunos
 from tb_alunos
-group by year (data_nascimento)
+group by year(data_nascimento)
 order by ano desc 
 ```
 
@@ -44,8 +44,8 @@ having
 
 ```sql
 select
-	cu.carga_horaria,
-	ROUND(AVG(cu.carga_horaria), 2)
+	tu.turno,
+	round(avg(cu.carga_horaria), 2) as media_carga_horaria
 from tb_turmas tu
 inner join tb_cursos cu
 	on cu.id_curso = tu.id_curso_fk 
@@ -61,14 +61,14 @@ group by tu.turno
 - Consulta:
 
 ```sql
-SELECT 
+select 
     do.nome,
-    COUNT(DISTINCT dc.id_curso_fk) AS cursos_diferentes
-FROM tb_docente_curso dc
-INNER JOIN tb_docentes do
-    ON do.id_docente = dc.id_docente_fk
-GROUP BY do.id_docente, do.nome
-HAVING COUNT(DISTINCT dc.id_curso_fk) >= 3;
+    count(dc.id_curso_fk) as cursos_diferentes
+from tb_docente_curso dc
+inner join tb_docentes do
+    on do.id_docente = dc.id_docente_fk
+group by do.id_docente, do.nome
+having cursos_diferentes >= 3
 ```
 
 - Resposta:
@@ -82,7 +82,7 @@ HAVING COUNT(DISTINCT dc.id_curso_fk) >= 3;
 ```sql
 select
     tu.sigla_turma,
-    count(*) as total_alunos
+    count(at.id_aluno_fk) as total_alunos
 from tb_aluno_turma at
 inner join tb_turmas tu
 	on tu.id_turma = at.id_turma_fk 
@@ -114,7 +114,7 @@ inner join tb_turmas tu
 inner join tb_salas sa
 	on sa.id_sala = tu.id_sala_fk 
 group by sa.id_sala, sa.numero_sala 
-having avg(t.total_alunos) < 38
+having media_usada < 38
 ```
 
 - Resposta:
@@ -125,17 +125,191 @@ having avg(t.total_alunos) < 38
 
 - Consulta:
 
+```sql
+select
+	cu.nome_curso,
+	cu.carga_horaria
+from tb_cursos as cu
+inner join tb_turmas tu
+	on tu.id_curso_fk = cu.id_curso 
+where tu.data_fim > CURRENT_DATE() or tu.data_fim is null
+order by cu.carga_horaria desc
+limit 1
+```
 
+- Resposta:
+
+![alt text](image-6.png)
 
 8.	Quais são os cursos (sigla) que possuem exatamente 150 alunos matriculados no total?
+
+- Consulta:
+
+```sql
+select
+	cu.sigla,
+	count(at.id_aluno_fk) as total_alunos
+from tb_cursos cu
+inner join tb_turmas tu
+	on tu.id_curso_fk = cu.id_curso
+inner join tb_aluno_turma at
+	on at.id_turma_fk = tu.id_turma
+group by cu.id_curso
+having total_alunos = 150
+```
+
+- Resposta:
+
+![alt text](image-7.png)
+
 9.	Encontre o nome do aluno e quantas turmas diferentes ele está matriculado, listando apenas os alunos que estão matriculados em quatro turmas ou mais.
+
+- Consulta:
+
+```sql
+select
+	al.nome,
+	count(at.id_turma_fk) as numero_turmas
+from tb_alunos al
+inner join tb_aluno_turma at
+	on at.id_aluno_fk = al.id_aluno
+group by al.id_aluno
+having numero_turmas >= 4
+order by al.nome
+```
+
+- Resposta:
+
+![alt text](image-8.png)
+
 10.	Liste a especialidade do docente e a quantidade de docentes que possuem essa especialidade, exibindo apenas as especialidades que têm apenas um docente associado.
+
+- Consulta:
+
+```sql
+select
+	especialidade,
+	count(id_docente) as docentes
+from tb_docentes
+group by especialidade
+having docentes = 1
+order by especialidade asc
+```
+
+- Resposta:
+
+![alt text](image-9.png)
+
 11.	Encontre a sala (nome e tipo) que é usada por turmas do turno 'MANHA' e possui a maior capacidade.
+
+- Consulta:
+
+```sql
+select
+	sa.nome_sala,
+	sa.tipo
+from tb_salas sa
+inner join tb_turmas tu
+	on tu.id_sala_fk = sa.id_sala
+where turno = "MANHA"
+order by sa.capacidade desc
+limit 1
+```
+
+- Resposta:
+
+![alt text](image-10.png)
+
 12.	Liste a data de nascimento e o número de alunos que nasceram nessa data, focando apenas nas datas em que nasceram pelo menos 3 alunos.
+
+- Consulta:
+
+```sql
+select
+	data_nascimento,
+	count(id_aluno ) as nasceram
+from tb_alunos
+group by data_nascimento
+having nasceram >= 3
+```
+
+- Resposta:
+
+![alt text](image-11.png)
+
 13.	Calcule o total de carga horária oferecida para cada sigla de curso.
+
+- Consulta:
+
+```sql
+select
+	sigla,
+	sum(carga_horaria)
+from tb_cursos
+group by sigla
+order by sigla
+```
+- Resposta:
+
+![alt text](image-12.png)
+
 14.	Liste o ID da sala e o número total de turmas alocadas nela, mas ignore as salas que abrigam menos de 5 turmas.
+
+- Consulta:
+
+```sql
+select
+	sa.id_sala,
+	count(tu.id_turma ) as total_turmas
+from tb_salas sa
+inner join tb_turmas tu
+	on tu.id_sala_fk = sa.id_sala
+group by sa.id_sala
+having total_turmas >= 5
+order by sa.id_sala 
+```
+
+- Resposta:
+
+![alt text](image-13.png)
+
 15.	Qual é o ID da turma que possui o menor número de alunos matriculados?
+
+- Consulta:
+
+```sql
+select
+	id_turma_fk as id_turma_menos_alunos
+from tb_aluno_turma
+group by id_turma_fk
+order by count(id_aluno_fk) asc
+limit 1
+```
+
+- Resposta
+
+![alt text](image-14.png)
+
 16.	Liste o nome do curso e a quantidade de turmas do turno 'TARDE' associadas a ele.
+
+- Consulta:
+
+```sql
+select 
+	cu.nome_curso,
+	count(tu.id_turma) as quantidade_turmas
+from tb_cursos cu
+inner join tb_turmas tu
+	on tu.id_curso_fk = cu.id_curso
+where tu.turno = "TARDE"
+group by cu.id_curso
+order by cu.nome_curso
+```
+
+- Resposta:
+
+![alt text](image-15.png)
+
 17.	Encontre o nome do docente e o nome do curso que ele é qualificado, mas apenas se o curso tiver uma carga_horaria de exatamente 800 horas.
 18.	Liste o nome do curso e o número de turmas que iniciaram em '2024-02-01'.
 19.	Quais são as turmas (sigla) que têm o nome do aluno matriculado começando com a letra 'A' (LIKE 'A%') e possuem mais de 3 alunos cujo nome se encaixa nesse critério?
