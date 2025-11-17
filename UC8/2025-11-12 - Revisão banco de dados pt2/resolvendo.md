@@ -143,6 +143,37 @@ having round(avg(at.total_alunos), 2) < 38
 
 ![alt text](image-29.png)
 
+- Sem subselect tanto para agrupar pelo número da sala como pelo nome da sala:
+
+- Id da sala:
+
+```sql
+select 
+	sa.nome_sala
+from tb_salas sa
+inner join tb_turmas tu
+	on tu.id_sala_fk = sa.id_sala 
+inner join tb_aluno_turma at 
+	on at.id_turma_fk  = tu.id_turma 
+group by sa.id_sala
+having round((count(at.id_aluno_fk) / count(distinct tu.id_turma)), 2) < 38
+```
+
+- Nome da sala:
+
+```sql
+select 
+	sa.nome_sala
+from tb_salas sa
+inner join tb_turmas tu
+	on tu.id_sala_fk = sa.id_sala 
+inner join tb_aluno_turma at 
+	on at.id_turma_fk  = tu.id_turma 
+group by sa.nome_sala
+having round((count(at.id_aluno_fk) / count(distinct tu.id_turma)), 2) < 38
+```
+
+
 7.	Liste o nome do curso e a carga horária máxima entre todos os cursos que possuem turmas abertas.
 
 - Consulta:
