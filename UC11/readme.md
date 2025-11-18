@@ -5,6 +5,11 @@
 ### Classificado para condomínios
 
 #### Nomes:
+
+- vizinhoz.com/br
+
+- classicondo.com/br
+
 - classificond.com.br
 - condofacil.com.br
 
@@ -13,23 +18,24 @@
 - carregar estrutura no site: https://dbdiagram.io/d
 
 ```sql
-table usuarios {
-  id int [primary key, not null]
+table tb_usuarios {
+  id_usuario int [primary key, not null]
   nome varchar [not null]
   email varchar [not null]
   senha varchar [not null]
 }
 
-table usuarios_condominios {
-  usuario_id int [not null]
-  condominio_id int [not null]
+table tb_usuarios_condominios {
+  id_usuario_fk int [not null]
+  id_condominio_fk int [not null]
   bloco varchar [not null]
   apartamento varchar [not null]
 }
 
-table condominios {
-  id int [primary key, not null]
-  nome int [not null]
+table tb_condominios {
+  id_condominio int [primary key, not null]
+  nome varchar [not null]
+  cep int [not null]
   numero int [not null]
   rua varchar [not null]
   cidade int [not null]
@@ -37,14 +43,14 @@ table condominios {
   pais int [not null]
 }
 
-table categorias {
-  id int [primary key, not null]
+table tb_categorias {
+  id_categoria int [primary key, not null]
   nome varchar [not null]
   img varchar [not null]
 }
 
-table produtos {
-  id int [primary key, not null]
+table tb_anuncios {
+  id_anuncio int [primary key, not null]
   usuario_id int [not null]
   categoria_id int [not null]
   titulo varchar [not null]
@@ -52,10 +58,10 @@ table produtos {
   criacao datetime [not null]
 }
 
-ref: usuarios_condominios.usuario_id > usuarios.id
-ref: usuarios_condominios.condominio_id > condominios.id
-ref: produtos.categoria_id > categorias.id
-ref: produtos.usuario_id > usuarios.id
+ref: tb_usuarios_condominios.id_usuario_fk > tb_usuarios.id_usuario
+ref: tb_usuarios_condominios.id_condominio_fk > tb_condominios.id_condominio
+ref: tb_anuncios.categoria_id > tb_categorias.id_categoria
+ref: tb_anuncios.usuario_id > tb_usuarios.id_usuario
 ```
 
 # Criando banco no mySQL

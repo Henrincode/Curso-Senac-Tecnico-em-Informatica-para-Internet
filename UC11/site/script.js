@@ -1,6 +1,6 @@
 // config
 
-const nomeSite = "condominiOZ"
+const nomeSite = "VIZINHOZ"
 
 // seletores
 

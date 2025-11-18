@@ -42,7 +42,7 @@ footer {
 
 .tela main {
     flex: 1;
-    padding: 20px 10px;
+    padding: 10px 0;
     background: linear-gradient(45deg, #caf0f8, #fff);
 }
 
@@ -50,8 +50,8 @@ footer {
     border-bottom: 3px solid #3e5c76;
     background-image: url(./image.png);
     /* background-repeat: no-repeat; */
-    background-position: center center;
-    /* background-size: cover; */
+    background-position: center;
+    background-size: cover;
 }
 
 #navTop .efeitoFundo {
@@ -60,7 +60,7 @@ footer {
     align-items: center;
     flex-wrap: nowrap;
     /* min-height: 150px; */
-    background-color: #3a85ff4f;
+    background-color: #0062ffc7;
 
     backdrop-filter: blur(2px);
 }
@@ -71,11 +71,11 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    min-height: 0;
+    min-height: 100px;
 }
 
 #navTop h1 {
-    font-size: 60px;
+    font-size: 40px;
     color: aliceblue;
     text-shadow: 0 0 10px #000;
 }
@@ -97,16 +97,21 @@ footer {
     flex-direction: row;
     gap: 20px;
 
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 18px;
+    /* font-weight: bold; */
     color: aliceblue;
-    text-shadow: 0 0 10px #000;
+    /* text-shadow: 0 0 10px #000; */
+}
+
+#navTop a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #1d2d44;
 }
 
 /* Carrossel */
 
 .carrocel {
-    visibility: hidden;
     height: 400px;
     border-radius: 11px;
     background-color: #3e5c76;
