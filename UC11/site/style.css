@@ -15,7 +15,8 @@ ul {
     list-style: none;
 }
 
-body, input {
+body,
+input {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -41,6 +42,7 @@ footer {
 
 .tela main {
     flex: 1;
+    padding: 20px 10px;
     background: linear-gradient(45deg, #caf0f8, #fff);
 }
 
@@ -99,6 +101,21 @@ footer {
     font-weight: bold;
     color: aliceblue;
     text-shadow: 0 0 10px #000;
+}
+
+/* Carrossel */
+
+.carrocel {
+    visibility: hidden;
+    height: 400px;
+    border-radius: 11px;
+    background-color: #3e5c76;
+    background-image: url(img/carrossel-prestador.jpg);
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-size: cover;
+    background-position: center;
+    animation: teste 1s ;
 }
 
 .teste {
